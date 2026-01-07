@@ -1,6 +1,5 @@
 let editRow = null;
 let noBerkasCounter = 1;
-let nomorSuratCounter = 1;
 
 const fields = [
   "noBerkas",
@@ -8,8 +7,7 @@ const fields = [
   "kodeKlasifikasi",
   "indeks1",
   "indeks2",
-  "nomorSurat",
-  "diberikanKepada",
+  "uraianInformasi",
   "tanggalSurat",
   "tingkatPerkembangan",
   "jumlah",
@@ -25,13 +23,8 @@ const fields = [
 ];
 
 window.onload = () => {
-  updateCounters();
-};
-
-function updateCounters() {
   document.getElementById("noBerkas").value = noBerkasCounter;
-  document.getElementById("nomorSurat").value = nomorSuratCounter;
-}
+};
 
 function simpanData() {
   if (editRow) return updateData();
@@ -47,18 +40,15 @@ function simpanData() {
     `<button onclick="editData(this)">Edit</button>`;
 
   noBerkasCounter++;
-  nomorSuratCounter++;
   resetForm();
-  updateCounters();
+  document.getElementById("noBerkas").value = noBerkasCounter;
 }
 
 function editData(btn) {
   editRow = btn.parentNode.parentNode;
-
   fields.forEach((id, i) => {
     document.getElementById(id).value = editRow.cells[i].innerText;
   });
-
   document.getElementById("btnSimpan").innerText = "Update Data";
 }
 
@@ -66,16 +56,14 @@ function updateData() {
   fields.forEach((id, i) => {
     editRow.cells[i].innerText = document.getElementById(id).value;
   });
-
   editRow = null;
   document.getElementById("btnSimpan").innerText = "Simpan Data";
   resetForm();
-  updateCounters();
 }
 
 function resetForm() {
   fields.forEach(id => {
-    if (!["noBerkas","nomorSurat","tingkatPerkembangan"].includes(id)) {
+    if (!["noBerkas","tingkatPerkembangan"].includes(id)) {
       document.getElementById(id).value = "";
     }
   });
