@@ -1,4 +1,6 @@
-let rowEdit = null;
+let editRow = null;
+let noBerkasCounter = 1;
+let nomorSuratCounter = 1;
 
 const fields = [
   "noBerkas","kodeMaster","kodeKlasifikasi","indeks1","indeks2",
@@ -7,64 +9,73 @@ const fields = [
   "noRak","noBox","noFolder","keterangan"
 ];
 
-function simpanData() {
-  if (rowEdit) {
-    updateData();
-    return;
-  }
+window.onload = () => {
+  updateCounters();
+};
 
-  const tabel = document.getElementById("tabelData");
-  const row = tabel.insertRow();
+function updateCounters() {
+  document.getElementById("noBerkas").value = noBerkasCounter;
+  document.getElementById("nomorSurat").value = nomorSuratCounter;
+}
+
+function simpanData() {
+  if (editRow) return updateData();
+
+  const tbody = document.getElementById("tabelData");
+  const row = tbody.insertRow();
 
   fields.forEach((id, i) => {
     row.insertCell(i).innerText = document.getElementById(id).value;
   });
 
-  const aksi = row.insertCell(fields.length);
-  aksi.innerHTML = `<button onclick="editData(this)">Edit</button>`;
+  row.insertCell(fields.length).innerHTML =
+    `<button onclick="editData(this)">Edit</button>`;
 
+  noBerkasCounter++;
+  nomorSuratCounter++;
   resetForm();
+  updateCounters();
 }
 
 function editData(btn) {
-  rowEdit = btn.parentNode.parentNode;
-
+  editRow = btn.parentNode.parentNode;
   fields.forEach((id, i) => {
-    document.getElementById(id).value = rowEdit.cells[i].innerText;
+    document.getElementById(id).value = editRow.cells[i].innerText;
   });
-
   document.getElementById("btnSimpan").innerText = "Update Data";
 }
 
 function updateData() {
   fields.forEach((id, i) => {
-    rowEdit.cells[i].innerText = document.getElementById(id).value;
+    editRow.cells[i].innerText = document.getElementById(id).value;
   });
-
-  rowEdit = null;
+  editRow = null;
   document.getElementById("btnSimpan").innerText = "Simpan Data";
   resetForm();
+  updateCounters();
 }
 
 function resetForm() {
-  fields.forEach(id => document.getElementById(id).value = "");
+  fields.forEach(id => {
+    if (!["noBerkas","nomorSurat","tingkatPerkembangan"].includes(id)) {
+      document.getElementById(id).value = "";
+    }
+  });
 }
 
 function exportCSV() {
-  const table = document.getElementById("tabel");
+  const rows = document.querySelectorAll("table tr");
   let csv = [];
-
-  for (let row of table.rows) {
-    let cols = [];
-    for (let cell of row.cells) {
-      cols.push(`"${cell.innerText.replace(/"/g, '""')}"`);
-    }
+  rows.forEach(row => {
+    let cols = [...row.children].map(col =>
+      `"${col.innerText.replace(/"/g, '""')}"`
+    );
     csv.push(cols.join(","));
-  }
+  });
 
   const blob = new Blob([csv.join("\n")], { type: "text/csv" });
-  const link = document.createElement("a");
-  link.download = "arsip_dinamis.csv";
-  link.href = URL.createObjectURL(blob);
-  link.click();
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "arsip_dinamis.csv";
+  a.click();
 }
