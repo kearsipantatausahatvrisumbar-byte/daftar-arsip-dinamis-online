@@ -16,29 +16,27 @@
 
 <h2>Input Arsip Dinamis</h2>
 
-<!-- FORM INPUT -->
-<div>
-  <input id="indeks1" placeholder="Indeks 1">
-  <input id="indeks2" placeholder="Indeks 2">
-  <input id="noItem" placeholder="No. Item Arsip">
-  <input id="noSurat" placeholder="Nomor Surat Tugas">
-  <input id="kepada" placeholder="Diberikan Kepada">
-  <input id="tglSurat" type="date">
-  <input id="tgl" type="date">
-  <input id="tingkat" placeholder="Tingkat Perkembangan">
-  <input id="jumlah" placeholder="Jumlah">
-  <input id="unit" placeholder="Unit Pengolah Arsip">
-  <input id="retensiAktif" placeholder="Retensi Aktif">
-  <input id="retensiInaktif" placeholder="Retensi Inaktif">
-  <input id="statusAkhir" placeholder="Status Akhir Arsip">
-  <input id="sistem" placeholder="Sistem Klasifikasi">
-  <input id="rak" placeholder="No. Rak">
-  <input id="box" placeholder="No. Box">
-  <input id="folder" placeholder="No. Folder">
-  <input id="keterangan" placeholder="Keterangan">
-  <br>
-  <button onclick="simpan()">Simpan Data</button>
-</div>
+<form>
+
+<label>No. Berkas</label><br>
+<input type="text" id="noBerkas"><br><br>
+
+<label>Kode Klasifikasi Master</label><br>
+<input type="text" id="kodeMaster"><br><br>
+
+<label>Kode Klasifikasi</label><br>
+<input type="text" id="kodeKlasifikasi"><br><br>
+
+<label>Indeks 1</label><br>
+<input type="text" id="indeks1"><br><br>
+
+<label>Indeks 2</label><br>
+<input type="text" id="indeks2"><br><br>
+
+<button type="button" onclick="simpanData()">Simpan</button>
+
+</form>
+
 
 <!-- TABEL HASIL -->
 <table id="tabelData">
@@ -75,3 +73,4 @@
 
 </body>
 </html>
+
