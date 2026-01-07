@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Arsip Dinamis</title>
+  <script src="script.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    input, select, button { margin: 4px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #000; padding: 4px; font-size: 12px; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+
+<h2>Input Arsip Dinamis</h2>
+
+<!-- FORM INPUT -->
+<div>
+  <input id="indeks1" placeholder="Indeks 1">
+  <input id="indeks2" placeholder="Indeks 2">
+  <input id="noItem" placeholder="No. Item Arsip">
+  <input id="noSurat" placeholder="Nomor Surat Tugas">
+  <input id="kepada" placeholder="Diberikan Kepada">
+  <input id="tglSurat" type="date">
+  <input id="tgl" type="date">
+  <input id="tingkat" placeholder="Tingkat Perkembangan">
+  <input id="jumlah" placeholder="Jumlah">
+  <input id="unit" placeholder="Unit Pengolah Arsip">
+  <input id="retensiAktif" placeholder="Retensi Aktif">
+  <input id="retensiInaktif" placeholder="Retensi Inaktif">
+  <input id="statusAkhir" placeholder="Status Akhir Arsip">
+  <input id="sistem" placeholder="Sistem Klasifikasi">
+  <input id="rak" placeholder="No. Rak">
+  <input id="box" placeholder="No. Box">
+  <input id="folder" placeholder="No. Folder">
+  <input id="keterangan" placeholder="Keterangan">
+  <br>
+  <button onclick="simpan()">Simpan Data</button>
+</div>
+
+<!-- TABEL HASIL -->
+<table id="tabelData">
+  <thead>
+    <tr>
+      <th>No. Berkas</th>
+      <th>Kode Klasifikasi Master</th>
+      <th>Kode Klasifikasi</th>
+      <th>Indeks 1</th>
+      <th>Indeks 2</th>
+      <th>No. Item Arsip</th>
+      <th>Nomor Surat Tugas</th>
+      <th>Diberikan Kepada</th>
+      <th>Tanggal Surat Tugas</th>
+      <th>Tanggal</th>
+      <th>Tingkat Perkembangan</th>
+      <th>Jumlah</th>
+      <th>Unit Pengolah Arsip</th>
+      <th>Retensi Aktif</th>
+      <th>Retensi Inaktif</th>
+      <th>Status Akhir Arsip</th>
+      <th>Sistem Klasifikasi</th>
+      <th>No. Rak</th>
+      <th>No. Box</th>
+      <th>No. Folder</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<br>
+<button onclick="exportCSV()">Export ke Excel (CSV)</button>
+
+</body>
+</html>
