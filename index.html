@@ -2,27 +2,41 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Daftar Isi Berkas Arsip</title>
+  <title>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF</title>
   <style>
-    body { font-family: Arial, sans-serif; font-size: 14px; padding: 20px; }
-    h2, h3 { text-align: center; margin: 0; }
-    h3 { margin-bottom: 25px; font-weight: normal; }
-    label { font-weight: bold; display: block; margin-top: 10px; }
-    input, select { width: 420px; padding: 6px; margin-top: 5px; }
-    button { margin-top: 15px; padding: 8px 16px; cursor: pointer; }
-    table { border-collapse: collapse; margin-top: 30px; width: 100%; font-size: 12px; }
-    th, td { border: 1px solid #000; padding: 6px; }
-    th { background: #eee; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
   </style>
 </head>
+
 <body>
 
-<h2>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF</h2>
-<h3>TVRI STASIUN SUMATERA BARAT</h3>
+<h1>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF TVRI STASIUN SUMATERA BARAT</h1>
 
+<!-- UNIT PENGOLAH -->
 <label>Unit Pengolah Arsip</label>
 <select id="unitPengolah">
-  <option value="">-- Pilih Unit Pengolah --</option>
+  <option value="">-- Pilih Unit --</option>
   <option>Sekretariat</option>
   <option>Tata Usaha</option>
   <option>Keuangan</option>
@@ -37,117 +51,27 @@
 
 <hr>
 
-<label>No Berkas</label>
-<input id="noBerkas" readonly>
-
-<label>Kode Master</label>
-<select id="kodeMaster">
-  <option value="">-- Pilih --</option>
-  <option>PR</option>
-  <option>TU</option>
-</select>
-
+<!-- FORM KLASIFIKASI -->
 <label>Kode Klasifikasi</label>
-<input id="kodeKlasifikasi">
-
-<label>Indeks 1</label>
-<select id="indeks1">
-  <option>Surat Tugas</option>
-  <option>Nota Dinas</option>
-  <option>Surat Masuk</option>
-  <option>Surat Keluar</option>
-  <option>Laporan</option>
-  <option>Berita Acara</option>
-  <option>Berkas Arsip Aktif Unit Kerja</option>
-  <option>Berkas Arsip Non Aktif Unit Kerja</option>
+<select id="kodeKlasifikasi">
+  <option value="">-- Pilih Kode Klasifikasi --</option>
 </select>
-
-<label>Indeks 2</label>
-<select id="indeks2">
-  <option>Sekretariat</option>
-  <option>Tata Usaha</option>
-  <option>Keuangan</option>
-  <option>Program & Berita</option>
-  <option>Konten Media Baru</option>
-  <option>Pengembangan Usaha</option>
-  <option>Teknik Transmisi</option>
-  <option>Teknik Studio</option>
-  <option>Umum Bagian SDM</option>
-  <option>Umum Bagian BMN</option>
-</select>
-
-<label>Uraian Informasi</label>
-<input id="uraianInformasi">
-
-<label>Tanggal</label>
-<input id="tanggalSurat" type="date">
-
-<label>Tingkat Perkembangan</label>
-<input id="tingkatPerkembangan" value="Asli / Copy" readonly>
-
-<label>Jumlah</label>
-<input id="jumlah">
 
 <label>Retensi Aktif</label>
-<input id="retensiAktif">
+<input type="text" id="retensiAktif" readonly>
 
 <label>Retensi Inaktif</label>
-<input id="retensiInaktif">
+<input type="text" id="retensiInaktif" readonly>
 
-<label>Status Akhir Arsip</label>
-<input id="statusAkhir">
+<label>Nasib Akhir</label>
+<input type="text" id="nasibAkhir" readonly>
 
 <label>Sistem Klasifikasi Keamanan dan Akses Arsip Dinamis</label>
-<input id="sistemKeamanan">
+<input type="text" id="keamananAkses" readonly>
 
-<label>No Rak</label>
-<input id="noRak">
-
-<label>No Box</label>
-<input id="noBox">
-
-<label>No Folder</label>
-<input id="noFolder">
-
-<label>Keterangan</label>
-<select id="keterangan">
-  <option>Baik</option>
-  <option>Rusak</option>
-</select>
-
-<br>
-<button id="btnSimpan" onclick="simpanData()">Simpan Data</button>
-<button onclick="exportCSV()">Export CSV</button>
-
-<table id="tabel">
-<thead>
-<tr>
-  <th>No Berkas</th>
-  <th>Kode Master</th>
-  <th>Kode Klasifikasi</th>
-  <th>Indeks 1</th>
-  <th>Indeks 2</th>
-  <th>Uraian Informasi</th>
-  <th>Tanggal</th>
-  <th>Tingkat</th>
-  <th>Jumlah</th>
-  <th>Unit Pengolah</th>
-  <th>Retensi Aktif</th>
-  <th>Retensi Inaktif</th>
-  <th>Status Akhir</th>
-  <th>Sistem Keamanan</th>
-  <th>No Rak</th>
-  <th>No Box</th>
-  <th>No Folder</th>
-  <th>Keterangan</th>
-  <th>Aksi</th>
-</tr>
-</thead>
-<tbody id="tabelData"></tbody>
-</table>
-  
+<!-- SCRIPT (URUTAN WAJIB) -->
 <script src="data.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
-
