@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF</title>
+  <title>DAFTAR ISI BERKAS ARSIP</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -10,28 +10,43 @@
     }
     h1 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
     label {
       display: block;
-      margin-top: 12px;
+      margin-top: 10px;
       font-weight: bold;
     }
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 8px;
       margin-top: 4px;
     }
     button {
-      margin-top: 20px;
+      margin-top: 15px;
       padding: 10px 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    table, th, td {
+      border: 1px solid #000;
+    }
+    th, td {
+      padding: 6px;
+      text-align: left;
+    }
+    th {
+      background: #eee;
     }
   </style>
 </head>
 
 <body>
 
-<h1>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF TVRI STASIUN SUMATERA BARAT</h1>
+<h1>DAFTAR ISI BERKAS ARSIP AKTIF / INAKTIF<br>TVRI STASIUN SUMATERA BARAT</h1>
 
 <!-- UNIT PENGOLAH -->
 <label>Unit Pengolah Arsip</label>
@@ -51,11 +66,17 @@
 
 <hr>
 
-<!-- FORM KLASIFIKASI -->
+<!-- FORM INPUT -->
+<label>No. Berkas</label>
+<input type="number" id="noBerkas">
+
 <label>Kode Klasifikasi</label>
 <select id="kodeKlasifikasi">
   <option value="">-- Pilih Kode Klasifikasi --</option>
 </select>
+
+<label>Uraian Informasi</label>
+<textarea id="uraian"></textarea>
 
 <label>Retensi Aktif</label>
 <input type="text" id="retensiAktif" readonly>
@@ -69,7 +90,37 @@
 <label>Sistem Klasifikasi Keamanan dan Akses Arsip Dinamis</label>
 <input type="text" id="keamananAkses" readonly>
 
-<!-- SCRIPT (URUTAN WAJIB) -->
+<label>Tingkat Perkembangan</label>
+<input type="text" value="Asli / Copy" readonly>
+
+<label>Keterangan</label>
+<select id="keterangan">
+  <option>Baik</option>
+  <option>Rusak</option>
+</select>
+
+<button onclick="simpanData()">Simpan</button>
+
+<!-- TABEL HASIL -->
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Unit</th>
+      <th>No Berkas</th>
+      <th>Kode Klasifikasi</th>
+      <th>Uraian Informasi</th>
+      <th>Retensi Aktif</th>
+      <th>Retensi Inaktif</th>
+      <th>Nasib Akhir</th>
+      <th>Keamanan</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody id="tabelData"></tbody>
+</table>
+
+<!-- SCRIPT -->
 <script src="data.js"></script>
 <script src="script.js"></script>
 
