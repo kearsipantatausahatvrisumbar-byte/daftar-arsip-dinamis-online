@@ -3,75 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Arsip Dinamis</title>
-  <script src="script.js"></script>
   <style>
     body { font-family: Arial, sans-serif; }
-    input, select, button { margin: 4px; }
-    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-    th, td { border: 1px solid #000; padding: 4px; font-size: 12px; }
-    th { background: #f0f0f0; }
+    input, select { margin: 4px; padding: 4px; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+    th, td { border: 1px solid #000; padding: 6px; font-size: 12px; }
+    th { background: #eee; }
   </style>
 </head>
 <body>
 
 <h2>Input Arsip Dinamis</h2>
 
-<form id="arsipForm">
+<!-- FORM INPUT -->
+<input id="noBerkas" placeholder="No. Berkas">
+<input id="kodeMaster" placeholder="Kode Klasifikasi Master">
+<input id="kodeKlasifikasi" placeholder="Kode Klasifikasi">
+<input id="indeks1" placeholder="Indeks 1">
+<input id="indeks2" placeholder="Indeks 2">
+<input id="noItem" placeholder="No. Item Arsip">
+<input id="nomorSurat" placeholder="Nomor Surat Tugas">
+<input id="diberikanKepada" placeholder="Diberikan Kepada">
+<input id="tanggalSurat" type="date">
+<input id="tanggal" type="date">
+<input id="tingkat" placeholder="Tingkat Perkembangan">
+<input id="jumlah" placeholder="Jumlah">
+<input id="unit" placeholder="Unit Pengolah Arsip">
+<input id="retensiAktif" placeholder="Retensi Aktif">
+<input id="retensiInaktif" placeholder="Retensi Inaktif">
+<input id="statusAkhir" placeholder="Status Akhir Arsip">
+<input id="sistem" placeholder="Sistem Klasifikasi">
+<input id="rak" placeholder="No. Rak">
+<input id="box" placeholder="No. Box">
+<input id="folder" placeholder="No. Folder">
+<input id="keterangan" placeholder="Keterangan">
 
-  <input type="text" id="noBerkas" placeholder="No. Berkas"><br><br>
-
-  <input type="text" id="kodeMaster" placeholder="Kode Klasifikasi Master (PR / TU)"><br><br>
-
-  <input type="text" id="kodeKlasifikasi" placeholder="Kode Klasifikasi (PR.03.02.a dll)"><br><br>
-
-  <input type="text" id="indeks1" placeholder="Indeks 1"><br><br>
-
-  <input type="text" id="indeks2" placeholder="Indeks 2"><br><br>
-
-  <input type="text" id="noItemArsip" placeholder="No. Item Arsip"><br><br>
-
-  <input type="text" id="nomorSurat" placeholder="Nomor Surat Tugas"><br><br>
-
-  <input type="text" id="diberikanKepada" placeholder="Diberikan Kepada"><br><br>
-
-  <label>Tanggal Surat Tugas</label><br>
-  <input type="date" id="tanggalSurat"><br><br>
-
-  <label>Tanggal</label><br>
-  <input type="date" id="tanggal"><br><br>
-
-  <input type="text" id="tingkatPerkembangan" placeholder="Tingkat Perkembangan"><br><br>
-
-  <input type="text" id="jumlah" placeholder="Jumlah"><br><br>
-
-  <input type="text" id="unitPengolah" placeholder="Unit Pengolah Arsip"><br><br>
-
-  <input type="text" id="retensiAktif" placeholder="Retensi Aktif"><br><br>
-
-  <input type="text" id="retensiInaktif" placeholder="Retensi Inaktif"><br><br>
-
-  <input type="text" id="statusAkhir" placeholder="Status Akhir Arsip"><br><br>
-
-  <input type="text" id="sistemKlasifikasi" placeholder="Sistem Klasifikasi & Akses"><br><br>
-
-  <input type="text" id="noRak" placeholder="No. Rak"><br><br>
-
-  <input type="text" id="noBox" placeholder="No. Box"><br><br>
-
-  <input type="text" id="noFolder" placeholder="No. Folder"><br><br>
-
-  <input type="text" id="keterangan" placeholder="Keterangan"><br><br>
-
-  <button type="button" onclick="simpanData()">Simpan Data</button>
-
-</form>
-
-<hr>
-
-
+<br><br>
+<button onclick="simpanData()">Simpan Data</button>
 
 <!-- TABEL HASIL -->
-<table id="tabelData">
+<table id="tabelArsip">
   <thead>
     <tr>
       <th>No. Berkas</th>
@@ -82,7 +53,7 @@
       <th>No. Item Arsip</th>
       <th>Nomor Surat Tugas</th>
       <th>Diberikan Kepada</th>
-      <th>Tanggal Surat Tugas</th>
+      <th>Tanggal Surat</th>
       <th>Tanggal</th>
       <th>Tingkat Perkembangan</th>
       <th>Jumlah</th>
@@ -103,9 +74,6 @@
 <br>
 <button onclick="exportCSV()">Export ke Excel (CSV)</button>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
