@@ -158,4 +158,43 @@
 
 <label>Keterangan</label>
 <select id="keterangan">
-  <option>Baik</option
+  <option>Baik</option>
+  <option>Rusak</option>
+</select>
+
+<br>
+<button id="btnSimpan" onclick="simpanData()">Simpan Data</button>
+<button onclick="exportCSV()">Export CSV</button>
+
+<!-- TABEL -->
+<table id="tabel">
+<thead>
+<tr>
+  <th>No Berkas</th>
+  <th>Kode Master</th>
+  <th>Kode Klasifikasi</th>
+  <th>Indeks 1</th>
+  <th>Indeks 2</th>
+  <th>No Surat</th>
+  <th>Diberikan Kepada</th>
+  <th>Tanggal</th>
+  <th>Tingkat</th>
+  <th>Jumlah</th>
+  <th>Unit Pengolah</th>
+  <th>Retensi Aktif</th>
+  <th>Retensi Inaktif</th>
+  <th>Status Akhir</th>
+  <th>Sistem Keamanan</th>
+  <th>No Rak</th>
+  <th>No Box</th>
+  <th>No Folder</th>
+  <th>Keterangan</th>
+  <th>Aksi</th>
+</tr>
+</thead>
+<tbody id="tabelData"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
