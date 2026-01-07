@@ -16,24 +16,58 @@
 
 <h2>Input Arsip Dinamis</h2>
 
-<form>
+<form id="arsipForm">
 
-<label>No. Berkas</label><br>
-<input type="text" id="noBerkas"><br><br>
+  <input type="text" id="noBerkas" placeholder="No. Berkas"><br><br>
 
-<input type="text" id="kodeMaster" placeholder="Kode Klasifikasi Master">
+  <input type="text" id="kodeMaster" placeholder="Kode Klasifikasi Master (PR / TU)"><br><br>
 
-<input type="text" id="kodeKlasifikasi" placeholder="Kode Klasifikasi">
+  <input type="text" id="kodeKlasifikasi" placeholder="Kode Klasifikasi (PR.03.02.a dll)"><br><br>
 
-<label>Indeks 1</label><br>
-<input type="text" id="indeks1"><br><br>
+  <input type="text" id="indeks1" placeholder="Indeks 1"><br><br>
 
-<label>Indeks 2</label><br>
-<input type="text" id="indeks2"><br><br>
+  <input type="text" id="indeks2" placeholder="Indeks 2"><br><br>
 
-<button type="button" onclick="simpanData()">Simpan</button>
+  <input type="text" id="noItemArsip" placeholder="No. Item Arsip"><br><br>
+
+  <input type="text" id="nomorSurat" placeholder="Nomor Surat Tugas"><br><br>
+
+  <input type="text" id="diberikanKepada" placeholder="Diberikan Kepada"><br><br>
+
+  <label>Tanggal Surat Tugas</label><br>
+  <input type="date" id="tanggalSurat"><br><br>
+
+  <label>Tanggal</label><br>
+  <input type="date" id="tanggal"><br><br>
+
+  <input type="text" id="tingkatPerkembangan" placeholder="Tingkat Perkembangan"><br><br>
+
+  <input type="text" id="jumlah" placeholder="Jumlah"><br><br>
+
+  <input type="text" id="unitPengolah" placeholder="Unit Pengolah Arsip"><br><br>
+
+  <input type="text" id="retensiAktif" placeholder="Retensi Aktif"><br><br>
+
+  <input type="text" id="retensiInaktif" placeholder="Retensi Inaktif"><br><br>
+
+  <input type="text" id="statusAkhir" placeholder="Status Akhir Arsip"><br><br>
+
+  <input type="text" id="sistemKlasifikasi" placeholder="Sistem Klasifikasi & Akses"><br><br>
+
+  <input type="text" id="noRak" placeholder="No. Rak"><br><br>
+
+  <input type="text" id="noBox" placeholder="No. Box"><br><br>
+
+  <input type="text" id="noFolder" placeholder="No. Folder"><br><br>
+
+  <input type="text" id="keterangan" placeholder="Keterangan"><br><br>
+
+  <button type="button" onclick="simpanData()">Simpan Data</button>
 
 </form>
+
+<hr>
+
 
 
 <!-- TABEL HASIL -->
@@ -71,6 +105,7 @@
 
 </body>
 </html>
+
 
 
 
