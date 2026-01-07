@@ -5,8 +5,8 @@ function simpanData() {
   const indeks1 = document.getElementById("indeks1").value;
   const indeks2 = document.getElementById("indeks2").value;
 
-  if (!noBerkas) {
-    alert("No Berkas wajib diisi");
+  if (!noBerkas || !kodeMaster) {
+    alert("No Berkas dan Kode Master wajib diisi");
     return;
   }
 
@@ -19,7 +19,6 @@ function simpanData() {
   row.insertCell(3).innerText = indeks1;
   row.insertCell(4).innerText = indeks2;
 
-  // kosongkan input
   document.getElementById("noBerkas").value = "";
   document.getElementById("kodeMaster").value = "";
   document.getElementById("kodeKlasifikasi").value = "";
