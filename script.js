@@ -1,27 +1,55 @@
+let tabel = document.querySelector("#tabelArsip tbody");
+
 function simpanData() {
-  const noBerkas = document.getElementById("noBerkas").value;
-  const kodeMaster = document.getElementById("kodeMaster").value;
-  const kodeKlasifikasi = document.getElementById("kodeKlasifikasi").value;
-  const indeks1 = document.getElementById("indeks1").value;
-  const indeks2 = document.getElementById("indeks2").value;
+  let data = [
+    noBerkas.value,
+    kodeMaster.value,
+    kodeKlasifikasi.value,
+    indeks1.value,
+    indeks2.value,
+    noItem.value,
+    nomorSurat.value,
+    diberikanKepada.value,
+    tanggalSurat.value,
+    tanggal.value,
+    tingkat.value,
+    jumlah.value,
+    unit.value,
+    retensiAktif.value,
+    retensiInaktif.value,
+    statusAkhir.value,
+    sistem.value,
+    rak.value,
+    box.value,
+    folder.value,
+    keterangan.value
+  ];
 
-  if (
-    noBerkas === "" ||
-    kodeMaster === "" ||
-    kodeKlasifikasi === ""
-  ) {
-    alert("No Berkas dan Kode wajib diisi");
-    return;
-  }
+  let tr = document.createElement("tr");
 
-  const table = document.getElementById("dataTable");
-  const row = table.insertRow(-1);
+  data.forEach(d => {
+    let td = document.createElement("td");
+    td.textContent = d;
+    tr.appendChild(td);
+  });
 
-  row.insertCell(0).innerText = noBerkas;
-  row.insertCell(1).innerText = kodeMaster;
-  row.insertCell(2).innerText = kodeKlasifikasi;
-  row.insertCell(3).innerText = indeks1;
-  row.insertCell(4).innerText = indeks2;
+  tabel.appendChild(tr);
+  document.querySelectorAll("input").forEach(i => i.value = "");
+}
 
-  document.querySelector("form").reset();
+function exportCSV() {
+  let csv = [];
+  document.querySelectorAll("table tr").forEach(row => {
+    let cols = row.querySelectorAll("td, th");
+    let data = [];
+    cols.forEach(col => data.push(`"${col.innerText}"`));
+    csv.push(data.join(","));
+  });
+
+  let blob = new Blob([csv.join("\n")], { type: "text/csv" });
+  let url = URL.createObjectURL(blob);
+  let a = document.createElement("a");
+  a.href = url;
+  a.download = "arsip-dinamis.csv";
+  a.click();
 }
