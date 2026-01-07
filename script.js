@@ -6,12 +6,31 @@ function simpanData() {
     "noRak","noBox","noFolder","keterangan"
   ];
 
-  const values = fields.map(id => document.getElementById(id).value);
   const tabel = document.getElementById("tabelData");
   const row = tabel.insertRow();
 
-  values.forEach((val, i) => {
+  fields.forEach((id, i) => {
+    const val = document.getElementById(id).value;
     row.insertCell(i).innerText = val;
-    document.getElementById(fields[i]).value = "";
+    document.getElementById(id).value = "";
   });
+}
+
+function exportCSV() {
+  const table = document.getElementById("tabel");
+  let csv = [];
+
+  for (let row of table.rows) {
+    let cols = [];
+    for (let cell of row.cells) {
+      cols.push(`"${cell.innerText.replace(/"/g, '""')}"`);
+    }
+    csv.push(cols.join(","));
+  }
+
+  const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+  const link = document.createElement("a");
+  link.download = "arsip_dinamis.csv";
+  link.href = URL.createObjectURL(csvFile);
+  link.click();
 }
