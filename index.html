@@ -2,32 +2,100 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Input Arsip Dinamis</title>
+  <title>Daftar Isi Berkas Arsip</title>
   <style>
-    body { font-family: Arial, sans-serif; font-size: 14px; padding: 20px; }
-    input, select, button { width: 320px; padding: 6px; margin: 5px 0; }
-    table { border-collapse: collapse; margin-top: 20px; width: 100%; font-size: 12px; }
-    th, td { border: 1px solid #000; padding: 6px; }
-    th { background: #eee; }
-    button { cursor: pointer; }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 400px;
+      padding: 6px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 30px;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 6px;
+    }
+
+    th {
+      background: #eee;
+    }
   </style>
 </head>
 <body>
 
-<h2>Input Arsip Dinamis</h2>
+<h2>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF</h2>
+<h3>TVRI STASIUN SUMATERA BARAT</h3>
 
-<input id="noBerkas" placeholder="No Berkas" readonly>
+<!-- UNIT PENGOLAH DI ATAS -->
+<label>Unit Pengolah Arsip</label>
+<select id="unitPengolah">
+  <option value="">-- Pilih Unit Pengolah --</option>
+  <option>Sekretariat</option>
+  <option>Tata Usaha</option>
+  <option>Keuangan</option>
+  <option>Program & Berita</option>
+  <option>Konten Media Baru</option>
+  <option>Pengembangan Usaha</option>
+  <option>Teknik Transmisi</option>
+  <option>Teknik Studio</option>
+  <option>Umum Bagian SDM</option>
+  <option>Umum Bagian BMN</option>
+</select>
 
+<hr>
+
+<!-- FORM -->
+<label>No Berkas</label>
+<input id="noBerkas" readonly>
+
+<label>Kode Master</label>
 <select id="kodeMaster">
-  <option value="">-- Kode Master --</option>
+  <option value="">-- Pilih --</option>
   <option>PR</option>
   <option>TU</option>
 </select>
 
-<input id="kodeKlasifikasi" placeholder="Kode Klasifikasi">
+<label>Kode Klasifikasi</label>
+<input id="kodeKlasifikasi">
 
+<label>Indeks 1</label>
 <select id="indeks1">
-  <option value="">-- Indeks 1 --</option>
   <option>Surat Tugas</option>
   <option>Nota Dinas</option>
   <option>Surat Masuk</option>
@@ -38,8 +106,8 @@
   <option>Berkas Arsip Non Aktif Unit Kerja</option>
 </select>
 
+<label>Indeks 2</label>
 <select id="indeks2">
-  <option value="">-- Indeks 2 --</option>
   <option>Sekretariat</option>
   <option>Tata Usaha</option>
   <option>Keuangan</option>
@@ -52,70 +120,42 @@
   <option>Umum Bagian BMN</option>
 </select>
 
-<input id="nomorSurat" placeholder="Nomor Surat Tugas" readonly>
-<input id="diberikanKepada" placeholder="Diberikan Kepada">
+<label>Nomor Surat Tugas</label>
+<input id="nomorSurat" readonly>
+
+<label>Diberikan Kepada</label>
+<input id="diberikanKepada">
+
+<label>Tanggal</label>
 <input id="tanggalSurat" type="date">
+
+<label>Tingkat Perkembangan</label>
 <input id="tingkatPerkembangan" value="Asli / Copy" readonly>
-<input id="jumlah" placeholder="Jumlah">
 
-<select id="unitPengolah">
-  <option value="">-- Unit Pengolah Arsip --</option>
-  <option>Sekretariat</option>
-  <option>Tata Usaha</option>
-  <option>Keuangan</option>
-  <option>Program & Berita</option>
-  <option>Konten Media Baru</option>
-  <option>Pengembangan Usaha</option>
-  <option>Teknik Transmisi</option>
-  <option>Teknik Studio</option>
-  <option>Umum Bagian SDM</option>
-  <option>Umum Bagian BMN</option>
-</select>
+<label>Jumlah</label>
+<input id="jumlah">
 
-<input id="retensiAktif" placeholder="Retensi Aktif">
-<input id="retensiInaktif" placeholder="Retensi Inaktif">
-<input id="statusAkhir" placeholder="Status Akhir">
-<input id="noRak" placeholder="No Rak">
-<input id="noBox" placeholder="No Box">
-<input id="noFolder" placeholder="No Folder">
+<label>Retensi Aktif</label>
+<input id="retensiAktif">
 
+<label>Retensi Inaktif</label>
+<input id="retensiInaktif">
+
+<label>Status Akhir Arsip</label>
+<input id="statusAkhir">
+
+<label>Sistem Klasifikasi Keamanan dan Akses Arsip Dinamis</label>
+<input id="sistemKeamanan">
+
+<label>No Rak</label>
+<input id="noRak">
+
+<label>No Box</label>
+<input id="noBox">
+
+<label>No Folder</label>
+<input id="noFolder">
+
+<label>Keterangan</label>
 <select id="keterangan">
-  <option value="">-- Keterangan --</option>
-  <option>Baik</option>
-  <option>Rusak</option>
-</select>
-
-<br><br>
-<button id="btnSimpan" onclick="simpanData()">Simpan Data</button>
-<button onclick="exportCSV()">Export CSV</button>
-
-<table id="tabel">
-<thead>
-<tr>
-  <th>No Berkas</th>
-  <th>Kode Master</th>
-  <th>Kode Klasifikasi</th>
-  <th>Indeks 1</th>
-  <th>Indeks 2</th>
-  <th>No Surat</th>
-  <th>Diberikan Kepada</th>
-  <th>Tanggal</th>
-  <th>Tingkat</th>
-  <th>Jumlah</th>
-  <th>Unit Pengolah</th>
-  <th>Retensi Aktif</th>
-  <th>Retensi Inaktif</th>
-  <th>Status Akhir</th>
-  <th>No Rak</th>
-  <th>No Box</th>
-  <th>No Folder</th>
-  <th>Keterangan</th>
-  <th>Aksi</th>
-</tr>
-</thead>
-<tbody id="tabelData"></tbody>
-</table>
-
-<script src="script.js"></script>
-</body>
-</html>
+  <option>Baik</option
