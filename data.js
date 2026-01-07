@@ -42,9 +42,7 @@ const masterKlasifikasi = {
     keamanan: "None"
   },
   "PR.01.01": {
-    aktif: "2 Tahun setelah dikompilasi
-menjadi program kerja tahunan
-unit kerja",
+    aktif: "2 Tahun setelah dikompilasi menjadi program kerja tahunan unit kerja",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -56,9 +54,7 @@ unit kerja",
     keamanan: "Biasa / Terbuka"
   },
   "PR.01.03": {
-    aktif: "2 Tahun setelah dikompilasi
-menjadi program kerja tahunan
-unit kerja",
+    aktif: "2 Tahun setelah dikompilasi menjadi program kerja tahunan unit kerja",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -106,34 +102,25 @@ unit kerja",
     keamanan: "None"
   },
   "PR.03.02.a": {
-    aktif: "1 Tahun setelah dikompilasi
-menjadi laporan triwulan Unit
-Kerja",
+    aktif: "1 Tahun setelah dikompilasi menjadi laporan triwulan Unit Kerja",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PR.03.02.b": {
-    aktif: "1 Tahun setelah dikompilasi
-menjadi laporan triwulan Unit
-Kerja",
+    aktif: "1 Tahun setelah dikompilasi menjadi laporan triwulan Unit Kerja",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PR.03.02.c": {
-    aktif: "1 Tahun setelah dikompilasi
-menjadi laporan triwulan Unit
-Kerja",
+    aktif: "1 Tahun setelah dikompilasi menjadi laporan triwulan Unit Kerja",
     inaktif: "2 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PR.03.02.d": {
-    aktif: "2 Tahun setelah dikompilasi
-menjadi laporan Tahunan
-Lembaga Penyiaran Publik
-Televisi Republik Indonesia",
+    aktif: "2 Tahun setelah dikompilasi menjadi laporan Tahunan Lembaga Penyiaran Publik Televisi Republik Indonesia",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -171,10 +158,7 @@ Televisi Republik Indonesia",
   "PR.04.01": {
     aktif: "2 Tahun",
     inaktif: "4 Tahun",
-    akhir: "Musnah, setelah masuk
-menjadi evaluasi program
-Lembaga Penyiaran Publik
-Televisi Republik Indonesia",
+    akhir: "Musnah, setelah masuk menjadi evaluasi program Lembaga Penyiaran Publik Televisi Republik Indonesia",
     keamanan: "Terbatas"
   },
   "PR.04.02": {
@@ -196,22 +180,19 @@ Televisi Republik Indonesia",
     keamanan: "None"
   },
   "PR.06.01": {
-    aktif: "2 Tahun setelah tindak lanjut
-hasil pemeriksaan telah selesai",
+    aktif: "2 Tahun setelah tindak lanjut hasil pemeriksaan telah selesai",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PR.06.02": {
-    aktif: "2 Tahun setelah tindak lanjut
-hasil pemeriksaan telah selesai",
+    aktif: "2 Tahun setelah tindak lanjut hasil pemeriksaan telah selesai",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PR.06.03": {
-    aktif: "2 Tahun setelah tindak lanjut
-hasil pemeriksaan telah selesai",
+    aktif: "2 Tahun setelah tindak lanjut hasil pemeriksaan telah selesai",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -243,9 +224,7 @@ hasil pemeriksaan telah selesai",
   "TU.01.01.b": {
     aktif: "2 Tahun ",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali perjalanan
-Dinas Direktur Utama dan
-Dewan Pengawas Permanen",
+    akhir: "Musnah, kecuali perjalanan Dinas Direktur Utama dan Dewan Pengawas Permanen",
     keamanan: "Terbatas"
   },
   "TU.02.01": {
@@ -315,15 +294,13 @@ Dewan Pengawas Permanen",
     keamanan: "None"
   },
   "UM.00.03.a": {
-    aktif: "2 Tahun setelah serah terima
-barang",
+    aktif: "2 Tahun setelah serah terima barang",
     inaktif: "5 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "UM.00.03.b": {
-    aktif: "2 Tahun setelah serah terima
-barang",
+    aktif: "2 Tahun setelah serah terima barang",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -353,8 +330,7 @@ barang",
     keamanan: "Biasa / Terbuka"
   },
   "UM.01.01.c": {
-    aktif: "2 Tahun setelah barang
-dihapuskan",
+    aktif: "2 Tahun setelah barang dihapuskan",
     inaktif: "5 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -372,8 +348,7 @@ dihapuskan",
     keamanan: "None"
   },
   "UM.02.01": {
-    aktif: "2 Tahun setelah tahun anggaran
-berakhir",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -433,16 +408,13 @@ berakhir",
     keamanan: "Biasa / Terbuka"
   },
   "UM.02.03.f": {
-    aktif: "2 Tahun setelah barang
-dihapuskan",
+    aktif: "2 Tahun setelah barang dihapuskan",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "UM.02.04": {
-    aktif: "2 Tahun setelah barang
-dihapuskan atau
-dipindahtangankan",
+    aktif: "2 Tahun setelah barang dihapuskan atau dipindahtangankan",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Rahasia"
@@ -454,25 +426,19 @@ dipindahtangankan",
     keamanan: "None"
   },
   "UM.02.05.a": {
-    aktif: "2 Tahun setelah barang
-dihapuskan atau
-dipindahtangankan",
+    aktif: "2 Tahun setelah barang dihapuskan atau dipindahtangankan",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "UM.02.05.b": {
-    aktif: "2 Tahun setelah barang
-dihapuskan atau
-dipindahtangankan",
+    aktif: "2 Tahun setelah barang dihapuskan atau dipindahtangankan",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "UM.02.06": {
-    aktif: "2 Tahun setelah barang
-dihapuskan atau
-dipindahtangankan",
+    aktif: "2 Tahun setelah barang dihapuskan atau dipindahtangankan",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -676,15 +642,13 @@ dipindahtangankan",
     keamanan: "None"
   },
   "KP.01.05.a": {
-    aktif: "2 Tahun setelah data
-diperbaharui",
+    aktif: "2 Tahun setelah data diperbaharui",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.05.b": {
-    aktif: "2 Tahun setelah tahun anggaran
-berakhir",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -696,19 +660,15 @@ berakhir",
     keamanan: "None"
   },
   "KP.01.06.a": {
-    aktif: "2 Tahun setelah tahun anggaran
-berakhir",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.06.b": {
-    aktif: "2 Tahun setelah tahun anggaran
-berakhir",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Permintaan
-formasi khusus masuk berkas
-perseorangan",
+    akhir: "Musnah, kecuali Permintaan formasi khusus masuk berkas perseorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07": {
@@ -718,36 +678,31 @@ perseorangan",
     keamanan: "None"
   },
   "KP.01.07.a": {
-    aktif: "2 Tahun setelah semua diangkat
-Pegawai Negeri Sipil",
+    aktif: "2 Tahun setelah semua diangkat Pegawai Negeri Sipil",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.b": {
-    aktif: "1 Tahun setelah tahun anggaran
-berakhir",
+    aktif: "1 Tahun setelah tahun anggaran berakhir",
     inaktif: "-",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.c": {
-    aktif: "2 Tahun setelah diangkat jadi
-Aparatur Sipil Negara",
+    aktif: "2 Tahun setelah diangkat jadi Aparatur Sipil Negara",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.d": {
-    aktif: "2 Tahun setelah diangkat jadi
-Aparatur Sipil Negara",
+    aktif: "2 Tahun setelah diangkat jadi Aparatur Sipil Negara",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.e": {
-    aktif: "2 Tahun setelah diangkat jadi
-Aparatur Sipil Negara",
+    aktif: "2 Tahun setelah diangkat jadi Aparatur Sipil Negara",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Biasa / Terbuka"
@@ -755,29 +710,23 @@ Aparatur Sipil Negara",
   "KP.01.07.f": {
     aktif: "2 Tahun",
     inaktif: "2 Tahun",
-    akhir: "Musnah kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.g": {
-    aktif: "1 Tahun setelah Surat Keputusan
-ditetapkan",
+    aktif: "1 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "2 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.h": {
-    aktif: "2 Tahun setelah perjanjian kerja
-berakhir",
+    aktif: "2 Tahun setelah perjanjian kerja berakhir",
     inaktif: "3 Tahun",
-    akhir: "Musnah kecuali eselon 1
-Permanen",
+    akhir: "Musnah kecuali eselon 1 permanen",
     keamanan: "Biasa / Terbuka"
   },
   "KP.01.07.i": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -789,8 +738,7 @@ Keputusan ditetapkan",
     keamanan: "None"
   },
   "KP.02.01": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -822,10 +770,7 @@ Keputusan ditetapkan",
   "KP.02.06": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Laporan Hasil
-Kekayaan Penyelenggaraan
-Negara Direktur Utama
-Permanen",
+    akhir: "Musnah, kecuali Laporan Hasil Kekayaan Penyelenggaraan Negara Direktur Utama Permanen",
     keamanan: "Terbatas"
   },
   "KP.02.07": {
@@ -835,15 +780,13 @@ Permanen",
     keamanan: "Terbatas"
   },
   "KP.02.08": {
-    aktif: "2 Tahun setelah anggaran
-berjalan",
+    aktif: "2 Tahun setelah anggaran berjalan",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Terbatas"
   },
   "KP.03.01": {
-    aktif: "2 Tahun setelah memperoleh
-keputusan tetap",
+    aktif: "2 Tahun setelah memperoleh keputusan tetap",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -855,8 +798,7 @@ keputusan tetap",
     keamanan: "None"
   },
   "KP.04.01": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Terbatas"
@@ -880,46 +822,33 @@ Keputusan ditetapkan",
     keamanan: "Terbatas"
   },
   "KP.04.05": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.04.06": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.04.07": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KP.04.08": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.04.09": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.05": {
@@ -935,37 +864,15 @@ Perseorangan",
     keamanan: "None"
   },
   "KP.05.01.a": {
-    aktif: "1 Tahun setelah
-berhenti/Pensiun",
+    aktif: "1 Tahun setelah berhenti/Pensiun",
     inaktif: "2 Tahun",
-    akhir: "Musnah, Kecuali Direktur
-Utama, dan Pejabat lain yang
-secara individual ditentukan
-oleh Lembaga Penyiaran
-Publik Televisi Republik
-Indonesia dan Aparatur Sipil
-Negara yang berjasa/terlibat
-dalam peristiwa Berskala
-Nasional Permanen",
+    akhir: "Musnah, Kecuali Direktur Utama, dan Pejabat lain yang secara individual ditentukan oleh Lembaga Penyiaran Publik Televisi Republik Indonesia dan Aparatur Sipil Negara yang berjasa/terlibat dalam peristiwa Berskala Nasional Permanen",
     keamanan: "Rahasia"
   },
   "KP.05.01.b": {
-    aktif: "1 Tahun setelah
-berhenti/Pensiun",
-    inaktif: "2 Tahun
-setelah hak
-dan
-kewajibannya
-habis",
-    akhir: "Musnah, Kecuali Direktur
-Utama, dan Pejabat lain yang
-secara individual ditentukan
-oleh Lembaga Penyiaran
-Publik Televisi Republik
-Indonesia dan Aparatur Sipil
-Negara yang berjasa/terlibat
-dalam peristiwa Berskala
-Nasional Permanen",
+    aktif: "1 Tahun setelah berhenti/Pensiun",
+    inaktif: "2 Tahun setelah hak dan kewajibannya habis",
+    akhir: "Musnah, Kecuali Direktur Utama, dan Pejabat lain yang secara individual ditentukan oleh Lembaga Penyiaran Publik Televisi Republik Indonesia dan Aparatur Sipil Negara yang berjasa/terlibat dalam peristiwa Berskala Nasional Permanen",
     keamanan: "Rahasia"
   },
   "KP.05.01.c": {
@@ -999,8 +906,7 @@ Nasional Permanen",
     keamanan: "Terbatas"
   },
   "KP.05.05": {
-    aktif: "2 Tahun setelah Penetapan
-Angka Kredit ditetapkan",
+    aktif: "2 Tahun setelah Penetapan Angka Kredit ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Masuk berkas Perorangan",
     keamanan: "Terbatas"
@@ -1054,12 +960,9 @@ Angka Kredit ditetapkan",
     keamanan: "Terbatas"
   },
   "KP.07.02": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseoranqan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseoranqan",
     keamanan: "Terbatas"
   },
   "KP.07.03": {
@@ -1081,12 +984,9 @@ Perseoranqan",
     keamanan: "Terbatas"
   },
   "KP.07.03.c": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, Kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, Kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.07.03.d": {
@@ -1096,19 +996,15 @@ Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.07.03.e": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KP.07.03.f": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, Kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, Kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.07.03.g": {
@@ -1136,12 +1032,9 @@ Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.08.01.c": {
-    aktif: "1 Tahun setelah memperoleh
-keputusan hukum tetap",
+    aktif: "1 Tahun setelah memperoleh keputusan hukum tetap",
     inaktif: "2 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseorangan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.09": {
@@ -1157,12 +1050,9 @@ Perseorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.09.02": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, Kecuali Cuti Diluar
-Tanggungan Negara masuk
-berkas Perseorangan",
+    akhir: "Musnah, Kecuali Cuti Diluar Tanggungan Negara masuk berkas Perseorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.09.03": {
@@ -1180,9 +1070,7 @@ berkas Perseorangan",
   "KP.09.05": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, Kecuali Cuti Diluar
-Tanggungan Negara masuk
-berkas Perseorangan",
+    akhir: "Musnah, Kecuali Cuti Diluar Tanggungan Negara masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.09.06": {
@@ -1198,12 +1086,9 @@ berkas Perseorangan",
     keamanan: "None"
   },
   "KP.10.01": {
-    aktif: "1 Tahun, setelah identitas/status
-ditetapkan",
+    aktif: "1 Tahun, setelah identitas/status ditetapkan",
     inaktif: "-",
-    akhir: "Musnah kecuali hasil uji
-kesehatan/med/ca/ check up,
-masuk berkas Perseorangan",
+    akhir: "Musnah kecuali hasil uji kesehatan/med/ca/ check up, masuk berkas Perseorangan",
     keamanan: "Terbatas"
   },
   "KP.10.02": {
@@ -1257,28 +1142,19 @@ masuk berkas Perseorangan",
   "KP.10.10": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah kecuali layanan
-Medical Records Direktur
-Utama. Permanen",
+    akhir: "Musnah kecuali layanan Medical Records Direktur Utama. Permanen",
     keamanan: "Terbatas"
   },
   "KP.11.01": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseoranaan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseoranaan",
     keamanan: "Terbatas"
   },
   "KP.12.01": {
-    aktif: "2 Tahun setelah memiliki
-keputusan yang bersifat
-tetap",
+    aktif: "2 Tahun setelah memiliki keputusan yang bersifat tetap",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseoranaan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseoranaan",
     keamanan: "Terbatas"
   },
   "KP.13.01": {
@@ -1288,12 +1164,9 @@ Perseoranaan",
     keamanan: "Terbatas"
   },
   "KP.14.01": {
-    aktif: "2 Tahun setelah Surat
-Keputusan ditetapkan",
+    aktif: "2 Tahun setelah Surat Keputusan ditetapkan",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali Surat
-Keputusan masuk berkas
-Perseoranaan",
+    akhir: "Musnah, kecuali Surat Keputusan masuk berkas Perseoranaan",
     keamanan: "Terbatas"
   },
   "KP.15.01": {
@@ -1312,8 +1185,7 @@ Perseoranaan",
     aktif: "2 Tahun Surat Keputusan
 ditetapkan",
     inaktif: "3 tahun",
-    akhir: "Musnah kecuali Sertifikat
-masuk berkas Perseorangan",
+    akhir: "Musnah kecuali Sertifikat masuk berkas Perseorangan",
     keamanan: "Biasa / Terbuka"
   },
   "KP.16.02": {
@@ -1331,9 +1203,7 @@ masuk berkas Perseorangan",
   "KP.16.02.b": {
     aktif: "2 Tahun",
     inaktif: "2 Tahun",
-    akhir: "Musnah, kecuali Standart
-Kompetensi Jabatan
-Fungsional Permanen",
+    akhir: "Musnah, kecuali Standart Kompetensi Jabatan Fungsional Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "KP.16.02.c": {
@@ -1349,8 +1219,7 @@ Fungsional Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "KP.16.02.e": {
-    aktif: "2 Tahun setelah Surat
-Keputusan terbit",
+    aktif: "2 Tahun setelah Surat Keputusan terbit",
     inaktif: "-",
     akhir: "Masuk berkas Perseorangan",
     keamanan: "Biasa / Terbuka"
@@ -1517,27 +1386,19 @@ kegiatan",
   "AR.03.01.a": {
     aktif: "1 Tahun",
     inaktif: "2 Tahun",
-    akhir: "Musnah
-Kecuali Master File dan
-Master Data Base",
+    akhir: "Musnah Kecuali Master File dan Master Data Base",
     keamanan: "Biasa / Terbuka"
   },
   "AR.03.01.b": {
     aktif: "1 Tahun setelah ditetapkan",
     inaktif: "2 Tahun",
-    akhir: "Musnah, kecuali surat
-persetujuan JRA dari Kepala
-ANRI dan Lampirannya
-Permanen",
+    akhir: "Musnah, kecuali surat persetujuan JRA dari Kepala ANRI dan Lampirannya Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "AR.03.01.c": {
     aktif: "1 Tahun setelah ditetapkan",
     inaktif: "2 Tahun",
-    akhir: "Musnah, kecuali surat
-persetujuan JRA dari Kepala
-ANRI dan Lampirannya
-Permanen",
+    akhir: "Musnah, kecuali surat persetujuan JRA dari Kepala ANRI dan Lampirannya Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "AR.04.01": {
@@ -1583,8 +1444,7 @@ Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "AR.07.01": {
-    aktif: "2 Tahun setelah ditetapkan
-aplikasi yang baru",
+    aktif: "2 Tahun setelah ditetapkan aplikasi yang baru",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Biasa / Terbuka"
@@ -1752,13 +1612,9 @@ aplikasi yang baru",
     keamanan: "Terbatas"
   },
   "AR.13.01.b": {
-    aktif: "2 Tahun setelah pelaksanaan
-Pameran selesai",
+    aktif: "2 Tahun setelah pelaksanaan Pameran selesai",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali buku tamu
-yang memuat nama Pimpinan
-Negara atau Tokoh
-nasional / dunia",
+    akhir: "Musnah, kecuali buku tamu yang memuat nama Pimpinan Negara atau Tokoh nasional / dunia",
     keamanan: "Terbatas"
   },
   "AR.13.01.c": {
@@ -1862,8 +1718,7 @@ kepemilikan",
   "HK.09.01": {
     aktif: "2 Tahun setelah tidak berlaku",
     inaktif: "-",
-    akhir: "Musnah, kecuali yang memiliki
-nilai guna sejarah, Permanen",
+    akhir: "Musnah, kecuali yang memiliki nilai guna sejarah, Permanen",
     keamanan: "Terbatas"
   },
   "HK.10.01": {
@@ -1909,29 +1764,25 @@ nilai guna sejarah, Permanen",
     keamanan: "None"
   },
   "HK.14.01.a": {
-    aktif: "1 Tahun setelah diperoleh
-kesepakatan",
+    aktif: "1 Tahun setelah diperoleh kesepakatan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "HK.14.01.b": {
-    aktif: "1 Tahun setelah diperoleh
-kesepakatan",
+    aktif: "1 Tahun setelah diperoleh kesepakatan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "HK.14.01.c": {
-    aktif: "1 Tahun setelah diperoleh
-kesepakatan",
+    aktif: "1 Tahun setelah diperoleh kesepakatan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "HK.14.01.d": {
-    aktif: "1 Tahun setelah diperoleh
-kesepakatan",
+    aktif: "1 Tahun setelah diperoleh kesepakatan",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -1943,51 +1794,37 @@ kesepakatan",
     keamanan: "None"
   },
   "HK.15.01": {
-    aktif: "1 Tahun setelah keputusan
-berkekuatan hukum tetap dan
-dipenuhi hak dan kewajiban",
+    aktif: "1 Tahun setelah keputusan berkekuatan hukum tetap dan dipenuhi hak dan kewajiban",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali kasus pidana
-yang melibatkan tokoh.
-Permanen",
+    akhir: "Musnah, kecuali kasus pidana yang melibatkan tokoh Permanen",
     keamanan: "Rahasia"
   },
   "HK.15.02": {
-    aktif: "2 Tahun setelah keputusan
-berkekuatan hukum tetap dan
-dipenuhi hak dan kewajiban",
+    aktif: "2 Tahun setelah keputusan berkekuatan hukum tetap dan dipenuhi hak dan kewajiban",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali kasus pidana
-yang melibatkan tokoh.
-Permanen",
+    akhir: "Musnah, kecuali kasus pidana yang melibatkan tokoh Permanen",
     keamanan: "Rahasia"
   },
   "HK.15.03": {
-    aktif: "2 Tahun setelah keputusan
-berkekuatan hukum tetap dan
-dipenuhi hak dan kewajiban",
+    aktif: "2 Tahun setelah keputusan berkekuatan hukum tetap dan dipenuhi hak dan kewajiban",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Rahasia"
   },
   "HK.15.04": {
-    aktif: "2 Tahun setelah keputusan
-berkekuatan hukum tetap dan
-dipenuhi hak dan kewajiban",
+    aktif: "2 Tahun setelah keputusan berkekuatan hukum tetap dan dipenuhi hak dan kewajiban",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Rahasia"
   },
   "HK.15.05": {
-    aktif: "2 Tahun setelah pelaksanaan
-rekomendasi",
+    aktif: "2 Tahun setelah pelaksanaan rekomendasi",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Rahasia"
   },
   "HK.15.06": {
-    aktif: "2 Tahun setelah HaKI
-diperbaharui",
+    aktif: "2 Tahun setelah HaKI diperbaharui",
     inaktif: "2 Tahun",
     akhir: "Musnah",
     keamanan: "Rahasia"
@@ -2085,9 +1922,7 @@ diperbaharui",
   "HM.00.14": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai
-seiarah, Permanen
-",
+    akhir: "Musnah, kecuali yang bernilai seiarah, Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "HM.00.14.a": {
@@ -2099,9 +1934,7 @@ seiarah, Permanen
   "HM.00.14.b": {
     aktif: "1 Tahun",
     inaktif: "4 Tahun",
-    akhir: "Musnah, kecuali yang bernilai
-seiarah, Permanen
-",
+    akhir: "Musnah, kecuali yang bernilai seiarah, Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "HM.00.14.c": {
@@ -2131,8 +1964,7 @@ seiarah, Permanen
   "HM.00.16.a": {
     aktif: "1 Tahun",
     inaktif: "-",
-    akhir: "Musnah, kecuali yang bernilai
-seiarah, Permanen",
+    akhir: "Musnah, kecuali yang bernilai seiarah, Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "HM.00.16.b": {
@@ -2282,8 +2114,7 @@ seiarah, Permanen",
   "HM.01.05.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, Kecuali buku tamu kunjungan dinas Pimpinan / Tokoh Nasional / Dunia, Permanen
-",
+    akhir: "Musnah, Kecuali buku tamu kunjungan dinas Pimpinan / Tokoh Nasional / Dunia, Permanen",
     keamanan: "Terbatas"
   },
   "HM.01.05.c": {
@@ -2359,78 +2190,67 @@ seiarah, Permanen",
     keamanan: "Terbatas"
   },
   "KU.00.02.a": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Terbatas"
   },
   "KU.00.02.b": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Terbatas"
   },
   "KU.00.02.c": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KU.00.02.d": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Terbatas"
   },
   "KU.00.02.e": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KU.00.02.f": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KU.00.03": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KU.00.04": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "KU.00.05": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Permanen",
     keamanan: "Biasa / Terbuka"
   },
   "KU.00.06": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
   },
   "KU.00.07": {
-    aktif: "1 Tanun setelah Peraturan pemerintah di tetapkan
-",
+    aktif: "1 Tanun setelah Peraturan pemerintah di tetapkan",
     inaktif: "9 Tahun",
     akhir: "Musnah",
     keamanan: "Biasa / Terbuka"
@@ -2454,15 +2274,13 @@ seiarah, Permanen",
     keamanan: "Terbatas"
   },
   "KU.01.02.a": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KU.01.02.b": {
-    aktif: "2 Tahun setelah tahun anggaran berakhir
-",
+    aktif: "2 Tahun setelah tahun anggaran berakhir",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -2510,15 +2328,13 @@ seiarah, Permanen",
     keamanan: "Terbatas"
   },
   "KU.02.01.b": {
-    aktif: "2 Tahun setelah software diterima
-",
+    aktif: "2 Tahun setelah software diterima",
     inaktif: "5 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "KU.02.02": {
-    aktif: "2 Tahun setelah softw are
-diterima",
+    aktif: "2 Tahun setelah softw arediterima",
     inaktif: "5 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -3274,15 +3090,13 @@ diterima",
     keamanan: "None"
   },
   "PB.00.01.f": {
-    aktif: "1 Tahun setelah program
-selesai",
+    aktif: "1 Tahun setelah program selesai",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
   },
   "PB.00.01.g": {
-    aktif: "1 Tahun setelah program
-selesai",
+    aktif: "1 Tahun setelah program selesai",
     inaktif: "3 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
@@ -3326,50 +3140,43 @@ selesai",
   "PB.00.04.a": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.c": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.d": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.e": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.f": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.00.04.g": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01": {
@@ -3387,64 +3194,55 @@ Permanen",
   "PB.01.01.a": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.c": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.d": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.e": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.f": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.g": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.h": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.01.i": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.02": {
@@ -3456,25 +3254,19 @@ Permanen",
   "PB.01.02.a": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.02.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.02.c": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.03": {
@@ -3486,49 +3278,37 @@ Permanen",
   "PB.01.03.a": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.03.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.03.c": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.03.d": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.04": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.01.05": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.02": {
@@ -3546,17 +3326,13 @@ Permanen",
   "PB.02.01.a": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.02.01.b": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah, kecuali yang
-bernilai guna sejarah
-Permanen",
+    akhir: "Musnah, kecuali yang bernilai guna sejarah Permanen",
     keamanan: "Terbatas"
   },
   "PB.02.02": {
@@ -3610,11 +3386,7 @@ Permanen",
   "PB.03.01": {
     aktif: "2 Tahun",
     inaktif: "3 Tahun",
-    akhir: "Musnah kecuali
-Dokumentasi Visual
-Hasil Siaran yang
-mempunyai Nilai
-Sejarah, Permanen",
+    akhir: "Musnah kecuali Dokumentasi Visual Hasil Siaran yang mempunyai Nilai Sejarah, Permanen",
     keamanan: "Terbatas"
   },
   "PB.03.02": {
@@ -3804,19 +3576,13 @@ Sejarah, Permanen",
     keamanan: "None"
   },
   "PU.00.03": {
-    aktif: "1 Tahun setelah tindak 
-lanjut hasil pemeriksaan 
-selesai
-",
+    aktif: "1 Tahun setelah tindak lanjut hasil pemeriksaan selesai",
     inaktif: "2 Tahun",
     akhir: "Permanen",
     keamanan: "Terbatas"
   },
   "PU.00.04": {
-    aktif: "1 Tahun setelah tindak 
-lanjut hasil pemeriksaan 
-selesai
-",
+    aktif: "1 Tahun setelah tindak lanjut hasil pemeriksaan selesai",
     inaktif: "2 Tahun",
     akhir: "Musnah",
     keamanan: "Terbatas"
