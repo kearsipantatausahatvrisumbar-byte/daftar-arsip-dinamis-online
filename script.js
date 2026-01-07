@@ -1,7 +1,7 @@
 function simpanData() {
   const nomorSurat = document.getElementById("nomorSurat").value;
-const diberikanKepada = document.getElementById("diberikanKepada").value;
-const tanggalSurat = document.getElementById("tanggalSurat").value;
+  const diberikanKepada = document.getElementById("diberikanKepada").value;
+  const tanggalSurat = document.getElementById("tanggalSurat").value;
   const noBerkas = document.getElementById("noBerkas").value;
   const kodeMaster = document.getElementById("kodeMaster").value;
   const kodeKlasifikasi = document.getElementById("kodeKlasifikasi").value;
@@ -36,4 +36,5 @@ document.getElementById("diberikanKepada").value = "";
 document.getElementById("tanggalSurat").value = "";
 
 }
+
 
