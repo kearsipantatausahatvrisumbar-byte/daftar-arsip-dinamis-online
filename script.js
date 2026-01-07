@@ -1,46 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
+let nomor = 1;
 
-  // ===== AMBIL ELEMEN FORM =====
-  const kodeKlasifikasi = document.getElementById("kodeKlasifikasi");
-  const retensiAktif = document.getElementById("retensiAktif");
-  const retensiInaktif = document.getElementById("retensiInaktif");
-  const nasibAkhir = document.getElementById("nasibAkhir");
-  const keamananAkses = document.getElementById("keamananAkses");
+document.addEventListener("DOMContentLoaded", () => {
+  const selectKode = document.getElementById("kodeKlasifikasi");
 
-  // ===== CEK MASTER DATA =====
-  if (typeof masterKlasifikasi === "undefined") {
-    console.error("masterKlasifikasi TIDAK ditemukan. data.js belum kebaca.");
-    return;
-  }
-
-  // ===== ISI DROPDOWN KODE KLASIFIKASI =====
-  kodeKlasifikasi.innerHTML = '<option value="">-- Pilih Kode Klasifikasi --</option>';
-
-  Object.keys(masterKlasifikasi).forEach(function (kode) {
-    const option = document.createElement("option");
-    option.value = kode;
-    option.textContent = kode;
-    kodeKlasifikasi.appendChild(option);
+  // isi dropdown kode klasifikasi
+  Object.keys(masterKlasifikasi).forEach(kode => {
+    const opt = document.createElement("option");
+    opt.value = kode;
+    opt.textContent = kode;
+    selectKode.appendChild(opt);
   });
 
-  // ===== SAAT KODE DIPILIH =====
-  kodeKlasifikasi.addEventListener("change", function () {
-    const kode = this.value;
+  // auto isi retensi & keamanan
+  selectKode.addEventListener("change", function () {
+    const data = masterKlasifikasi[this.value];
+    if (!data) return;
 
-    if (!kode || !masterKlasifikasi[kode]) {
-      retensiAktif.value = "";
-      retensiInaktif.value = "";
-      nasibAkhir.value = "";
-      keamananAkses.value = "";
-      return;
-    }
-
-    const data = masterKlasifikasi[kode];
-
-    retensiAktif.value = data.aktif || "";
-    retensiInaktif.value = data.inaktif || "";
-    nasibAkhir.value = data.akhir || "";
-    keamananAkses.value = data.keamanan || "";
+    document.getElementById("retensiAktif").value = data.aktif;
+    document.getElementById("retensiInaktif").value = data.inaktif;
+    document.getElementById("nasibAkhir").value = data.akhir;
+    document.getElementById("keamananAkses").value = data.keamanan;
   });
-
 });
+
+function simpanData() {
+  const tbody = document.getElementById("tabelData");
+
+  const row = tbody.insertRow();
+  row.insertCell().innerText = nomor++;
+  row.insertCell().innerText = unitPengolah.value;
+  row.insertCell().innerText = noBerkas.value;
+  row.insertCell().innerText = kodeKlasifikasi.value;
+  row.insertCell().innerText = uraian.value;
+  row.insertCell().innerText = retensiAktif.value;
+  row.insertCell().innerText = retensiInaktif.value;
+  row.insertCell().innerText = nasibAkhir.value;
+  row.insertCell().innerText = keamananAkses.value;
+  row.insertCell().innerText = keterangan.value;
+
+  // reset form sebagian
+  noBerkas.value = "";
+  uraian.value = "";
+}
