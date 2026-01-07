@@ -2,16 +2,17 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Arsip Dinamis</title>
+  <title>Input Arsip Dinamis</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       font-size: 14px;
+      padding: 20px;
     }
     input, select, button {
-      margin: 4px 0;
-      padding: 6px;
       width: 300px;
+      padding: 6px;
+      margin: 5px 0;
     }
     table {
       border-collapse: collapse;
@@ -22,9 +23,10 @@
     th, td {
       border: 1px solid #000;
       padding: 6px;
+      text-align: left;
     }
     th {
-      background: #eee;
+      background-color: #eee;
     }
   </style>
 </head>
@@ -48,10 +50,17 @@
 <input id="kodeKlasifikasi" placeholder="Kode Klasifikasi (PR.03.02.a dll)">
 <input id="indeks1" placeholder="Indeks 1">
 <input id="indeks2" placeholder="Indeks 2">
-  <input id="nomorSurat" placeholder="Nomor Surat Tugas">
+
+<input id="nomorSurat" placeholder="Nomor Surat Tugas">
 <input id="diberikanKepada" placeholder="Diberikan Kepada">
 <input id="tanggalSurat" type="date">
 
+<select id="tingkatPerkembangan">
+  <option value="">-- Pilih Tingkat Perkembangan --</option>
+  <option value="Asli">Asli</option>
+  <option value="Tembusan">Tembusan</option>
+  <option value="Salinan">Salinan</option>
+</select>
 
 <br><br>
 
@@ -67,9 +76,9 @@
       <th>Indeks 1</th>
       <th>Indeks 2</th>
       <th>Nomor Surat Tugas</th>
-<th>Diberikan Kepada</th>
-<th>Tanggal Surat</th>
-
+      <th>Diberikan Kepada</th>
+      <th>Tanggal Surat</th>
+      <th>Tingkat Perkembangan</th>
     </tr>
   </thead>
   <tbody id="tabelData"></tbody>
@@ -78,5 +87,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
