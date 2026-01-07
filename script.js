@@ -1,161 +1,100 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Daftar Isi Berkas Arsip</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      padding: 20px;
+let editRow = null;
+let noBerkasCounter = 1;
+let nomorSuratCounter = 1;
+
+const fields = [
+  "noBerkas",
+  "kodeMaster",
+  "kodeKlasifikasi",
+  "indeks1",
+  "indeks2",
+  "nomorSurat",
+  "diberikanKepada",
+  "tanggalSurat",
+  "tingkatPerkembangan",
+  "jumlah",
+  "unitPengolah",
+  "retensiAktif",
+  "retensiInaktif",
+  "statusAkhir",
+  "sistemKeamanan",
+  "noRak",
+  "noBox",
+  "noFolder",
+  "keterangan"
+];
+
+window.onload = () => {
+  updateCounters();
+};
+
+function updateCounters() {
+  document.getElementById("noBerkas").value = noBerkasCounter;
+  document.getElementById("nomorSurat").value = nomorSuratCounter;
+}
+
+function simpanData() {
+  if (editRow) return updateData();
+
+  const tbody = document.getElementById("tabelData");
+  const row = tbody.insertRow();
+
+  fields.forEach((id, i) => {
+    row.insertCell(i).innerText = document.getElementById(id).value;
+  });
+
+  row.insertCell(fields.length).innerHTML =
+    `<button onclick="editData(this)">Edit</button>`;
+
+  noBerkasCounter++;
+  nomorSuratCounter++;
+  resetForm();
+  updateCounters();
+}
+
+function editData(btn) {
+  editRow = btn.parentNode.parentNode;
+
+  fields.forEach((id, i) => {
+    document.getElementById(id).value = editRow.cells[i].innerText;
+  });
+
+  document.getElementById("btnSimpan").innerText = "Update Data";
+}
+
+function updateData() {
+  fields.forEach((id, i) => {
+    editRow.cells[i].innerText = document.getElementById(id).value;
+  });
+
+  editRow = null;
+  document.getElementById("btnSimpan").innerText = "Simpan Data";
+  resetForm();
+  updateCounters();
+}
+
+function resetForm() {
+  fields.forEach(id => {
+    if (!["noBerkas","nomorSurat","tingkatPerkembangan"].includes(id)) {
+      document.getElementById(id).value = "";
     }
+  });
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 5px;
-    }
+function exportCSV() {
+  const rows = document.querySelectorAll("table tr");
+  let csv = [];
 
-    h3 {
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: normal;
-    }
+  rows.forEach(row => {
+    let cols = [...row.children].map(col =>
+      `"${col.innerText.replace(/"/g, '""')}"`
+    );
+    csv.push(cols.join(","));
+  });
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
-    }
-
-    input, select {
-      width: 400px;
-      padding: 6px;
-      margin-top: 5px;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      cursor: pointer;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin-top: 30px;
-      width: 100%;
-      font-size: 12px;
-    }
-
-    th, td {
-      border: 1px solid #000;
-      padding: 6px;
-    }
-
-    th {
-      background: #eee;
-    }
-  </style>
-</head>
-<body>
-
-<h2>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF</h2>
-<h3>TVRI STASIUN SUMATERA BARAT</h3>
-
-<!-- UNIT PENGOLAH DI ATAS -->
-<label>Unit Pengolah Arsip</label>
-<select id="unitPengolah">
-  <option value="">-- Pilih Unit Pengolah --</option>
-  <option>Sekretariat</option>
-  <option>Tata Usaha</option>
-  <option>Keuangan</option>
-  <option>Program & Berita</option>
-  <option>Konten Media Baru</option>
-  <option>Pengembangan Usaha</option>
-  <option>Teknik Transmisi</option>
-  <option>Teknik Studio</option>
-  <option>Umum Bagian SDM</option>
-  <option>Umum Bagian BMN</option>
-</select>
-
-<hr>
-
-<!-- FORM -->
-<label>No Berkas</label>
-<input id="noBerkas" readonly>
-
-<label>Kode Master</label>
-<select id="kodeMaster">
-  <option value="">-- Pilih --</option>
-  <option>PR</option>
-  <option>TU</option>
-</select>
-
-<label>Kode Klasifikasi</label>
-<input id="kodeKlasifikasi">
-
-<label>Indeks 1</label>
-<select id="indeks1">
-  <option>Surat Tugas</option>
-  <option>Nota Dinas</option>
-  <option>Surat Masuk</option>
-  <option>Surat Keluar</option>
-  <option>Laporan</option>
-  <option>Berita Acara</option>
-  <option>Berkas Arsip Aktif Unit Kerja</option>
-  <option>Berkas Arsip Non Aktif Unit Kerja</option>
-</select>
-
-<label>Indeks 2</label>
-<select id="indeks2">
-  <option>Sekretariat</option>
-  <option>Tata Usaha</option>
-  <option>Keuangan</option>
-  <option>Program & Berita</option>
-  <option>Konten Media Baru</option>
-  <option>Pengembangan Usaha</option>
-  <option>Teknik Transmisi</option>
-  <option>Teknik Studio</option>
-  <option>Umum Bagian SDM</option>
-  <option>Umum Bagian BMN</option>
-</select>
-
-<label>Nomor Surat Tugas</label>
-<input id="nomorSurat" readonly>
-
-<label>Diberikan Kepada</label>
-<input id="diberikanKepada">
-
-<label>Tanggal</label>
-<input id="tanggalSurat" type="date">
-
-<label>Tingkat Perkembangan</label>
-<input id="tingkatPerkembangan" value="Asli / Copy" readonly>
-
-<label>Jumlah</label>
-<input id="jumlah">
-
-<label>Retensi Aktif</label>
-<input id="retensiAktif">
-
-<label>Retensi Inaktif</label>
-<input id="retensiInaktif">
-
-<label>Status Akhir Arsip</label>
-<input id="statusAkhir">
-
-<label>Sistem Klasifikasi Keamanan dan Akses Arsip Dinamis</label>
-<input id="sistemKeamanan">
-
-<label>No Rak</label>
-<input id="noRak">
-
-<label>No Box</label>
-<input id="noBox">
-
-<label>No Folder</label>
-<input id="noFolder">
-
-<label>Keterangan</label>
-<select id="keterangan">
-  <option>Baik</option
+  const blob = new Blob([csv.join("\n")], { type: "text/csv" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "daftar_isi_arsip.csv";
+  a.click();
+}
