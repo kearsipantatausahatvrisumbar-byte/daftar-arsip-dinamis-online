@@ -27,7 +27,7 @@ form.addEventListener("submit", function (e) {
 const tdNo = document.createElement("td");
 tdNo.textContent = noBerkas;
 
-const tdUraian = document.createElement("td");
+const tdKodeKlasifikasi = document.createElement("td");
 tdKodeKlasifikasi.textContent = KodeKlasifikasi;
 
 const tdUraian = document.createElement("td");
@@ -63,6 +63,7 @@ tr.appendChild(tdKet);
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
 
 
 
