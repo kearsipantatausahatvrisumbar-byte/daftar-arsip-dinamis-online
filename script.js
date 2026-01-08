@@ -3,6 +3,7 @@ const form = document.getElementById("formArsip");
 const tabel = document.getElementById("tabelData");
 const inputNoBerkas = document.getElementById("noBerkas");
 const inputUraian = document.getElementById("uraian");
+const inputIndeks1 = document.getElementById("indeks1");
 const inputKeterangan = document.getElementById("keterangan");
 
 // nomor berkas awal
@@ -15,6 +16,7 @@ form.addEventListener("submit", function (e) {
 
   const noBerkas = inputNoBerkas.value;
   const uraian = inputUraian.value;
+  const indeks1 = inputIndeks1.value;
   const keterangan = inputKeterangan.value;
 
   // VALIDASI SEDERHANA
@@ -28,6 +30,7 @@ form.addEventListener("submit", function (e) {
   tr.innerHTML = `
     <td>${noBerkas}</td>
     <td>${uraian}</td>
+    td>${indeks1}</td>
     <td>${keterangan}</td>
   `;
 
@@ -36,9 +39,11 @@ form.addEventListener("submit", function (e) {
 
   // reset input kecuali nomor
   inputUraian.value = "";
+  inputIndeks1.value = "";
   inputKeterangan.value = "";
 
   // naikkan nomor berkas
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
