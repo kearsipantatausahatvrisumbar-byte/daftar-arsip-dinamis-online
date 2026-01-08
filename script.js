@@ -1,3 +1,4 @@
+let nomorBerkas = 1;
 // isi nomor berkas otomatis saat halaman dibuka
 document.addEventListener("DOMContentLoaded", function () {
   const inputNoBerkas = document.getElementById("noBerkas");
@@ -20,7 +21,7 @@ const tabel = document.getElementById("tabelData");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const noBerkas = document.getElementById("noBerkas").value;
+  const noBerkas = nomorBerkas;
   const uraian = document.getElementById("uraian").value;
   const keterangan = document.getElementById("keterangan").value;
 
@@ -33,7 +34,10 @@ form.addEventListener("submit", function (e) {
   `;
 
   tabel.appendChild(tr);
+  nomorBerkas++;
+  document.getElementById("noBerkas").value = nomorBerkas;
   form.reset();
 });
+
 
 
