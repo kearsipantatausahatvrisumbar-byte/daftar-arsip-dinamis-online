@@ -4,6 +4,7 @@ const tabel = document.getElementById("tabelData");
 const inputNoBerkas = document.getElementById("noBerkas");
 const inputUraian = document.getElementById("uraian");
 const inputIndeks1 = document.getElementById("indeks1");
+const inputindeks2 = document.getElementById("indeks2");
 const inputKeterangan = document.getElementById("keterangan");
 
 // nomor berkas otomatis
@@ -16,6 +17,7 @@ form.addEventListener("submit", function (e) {
   const noBerkas = inputNoBerkas.value;
   const uraian = inputUraian.value;
   const indeks1 = inputIndeks1.value;
+  const indeks2 = inputIndeks2.value;
   const keterangan = inputKeterangan.value;
 
   const tr = document.createElement("tr");
@@ -29,12 +31,16 @@ tdUraian.textContent = uraian;
 const tdIndeks1 = document.createElement("td");
 tdIndeks1.textContent = indeks1;
 
+const tdIndeks2 = document.createElement("td");
+tdIndeks2.textContent = indeks2;
+  
 const tdKet = document.createElement("td");
 tdKet.textContent = keterangan;
 
 tr.appendChild(tdNo);
 tr.appendChild(tdUraian);
 tr.appendChild(tdIndeks1);
+tr.appendChild(tdIndeks2);
 tr.appendChild(tdKet);
 
 
@@ -43,10 +49,12 @@ tr.appendChild(tdKet);
   // reset input
   inputUraian.value = "";
   inputIndeks1.value = "";
+  inputIndeks2.value = "";
   inputKeterangan.value = "";
 
   // naikkan nomor berkas
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
 
