@@ -2,6 +2,7 @@ const form = document.getElementById("formArsip");
 const tabel = document.getElementById("tabelData");
 
 const inputNoBerkas = document.getElementById("noBerkas");
+const inputKodeKlasifikasi = document. getElementById("KodeKlasifikasi"?;
 const inputUraian = document.getElementById("uraian");
 const inputIndeks1 = document.getElementById("indeks1");
 const inputindeks2 = document.getElementById("indeks2");
@@ -15,6 +16,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const noBerkas = inputNoBerkas.value;
+  const noBerkas = KodeKlasifikasi.value;
   const uraian = inputUraian.value;
   const indeks1 = inputIndeks1.value;
   const indeks2 = inputIndeks2.value;
@@ -24,6 +26,9 @@ form.addEventListener("submit", function (e) {
 
 const tdNo = document.createElement("td");
 tdNo.textContent = noBerkas;
+
+const tdUraian = document.createElement("td");
+tdUraian.textContent = KodeKlasifikasi;
 
 const tdUraian = document.createElement("td");
 tdUraian.textContent = uraian;
@@ -38,6 +43,7 @@ const tdKet = document.createElement("td");
 tdKet.textContent = keterangan;
 
 tr.appendChild(tdNo);
+tr.appendChild(tdKodeKlasifikasi);
 tr.appendChild(tdUraian);
 tr.appendChild(tdIndeks1);
 tr.appendChild(tdIndeks2);
@@ -48,6 +54,7 @@ tr.appendChild(tdKet);
 
   // reset input
   inputUraian.value = "";
+  inputKodeKlasifikasi.value = "";
   inputIndeks1.value = "";
   inputIndeks2.value = "";
   inputKeterangan.value = "";
@@ -56,5 +63,6 @@ tr.appendChild(tdKet);
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
 
 
