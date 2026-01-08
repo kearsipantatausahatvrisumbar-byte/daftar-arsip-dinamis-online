@@ -19,12 +19,24 @@ form.addEventListener("submit", function (e) {
   const keterangan = inputKeterangan.value;
 
   const tr = document.createElement("tr");
-  tr.innerHTML = `
-    <td>${noBerkas}</td>
-    <td>${uraian}</td>
-    <td>${indeks1}</td>
-    <td>${keterangan}</td>
-  `;
+
+const tdNo = document.createElement("td");
+tdNo.textContent = noBerkas;
+
+const tdUraian = document.createElement("td");
+tdUraian.textContent = uraian;
+
+const tdIndeks1 = document.createElement("td");
+tdIndeks1.textContent = indeks1;
+
+const tdKet = document.createElement("td");
+tdKet.textContent = keterangan;
+
+tr.appendChild(tdNo);
+tr.appendChild(tdUraian);
+tr.appendChild(tdIndeks1);
+tr.appendChild(tdKet);
+
 
   tabel.appendChild(tr);
 
@@ -37,3 +49,4 @@ form.addEventListener("submit", function (e) {
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
