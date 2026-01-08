@@ -1,18 +1,77 @@
-let nomorBerkas = 1;
+let dataArsip = JSON.parse(localStorage.getItem("dataArsip")) || [];
+let nomorBerkas = dataArsip.length + 1;
+
 
 const noBerkasInput = document.getElementById("noBerkas");
 const form = document.getElementById("formArsip");
 const tabel = document.getElementById("tabelData");
 
 noBerkasInput.value = nomorBerkas;
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
+function tambahKeTabel(item) {
   const tr = document.createElement("tr");
 
   function td(val) {
     const cell = document.createElement("td");
+    cell.textContent = val;
+    return cell;
+  }
+
+  tr.appendChild(td(item.noBerkas));
+  tr.appendChild(td(item.kodeKlasifikasi));
+  tr.appendChild(td(item.indeks1));
+  tr.appendChild(td(item.indeks2));
+  tr.appendChild(td(item.noItem));
+  tr.appendChild(td(item.uraian));
+  tr.appendChild(td(item.tanggal));
+  tr.appendChild(td(item.tingkat));
+  tr.appendChild(td(item.jumlah));
+  tr.appendChild(td(item.unit));
+  tr.appendChild(td(item.retensiAktif));
+  tr.appendChild(td(item.retensiInaktif));
+  tr.appendChild(td(item.statusAkhir));
+  tr.appendChild(td(item.keamanan));
+  tr.appendChild(td(item.rak));
+  tr.appendChild(td(item.box));
+  tr.appendChild(td(item.folder));
+  tr.appendChild(td(item.keterangan));
+
+  tabel.appendChild(tr);
+}
+dataArsip.forEach(item => tambahKeTabel(item));
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+const item = {
+  noBerkas: noBerkasInput.value,
+  kodeKlasifikasi: document.getElementById("kodeKlasifikasi").value,
+  indeks1: document.getElementById("indeks1").value,
+  indeks2: document.getElementById("indeks2").value,
+  noItem: document.getElementById("noItem").value,
+  uraian: document.getElementById("uraian").value,
+  tanggal: document.getElementById("tanggal").value,
+  tingkat: document.getElementById("tingkat").value,
+  jumlah: document.getElementById("jumlah").value,
+  unit: document.getElementById("unit").value,
+  retensiAktif: document.getElementById("retensiAktif").value,
+  retensiInaktif: document.getElementById("retensiInaktif").value,
+  statusAkhir: document.getElementById("statusAkhir").value,
+  keamanan: document.getElementById("keamanan").value,
+  rak: document.getElementById("rak").value,
+  box: document.getElementById("box").value,
+  folder: document.getElementById("folder").value,
+  keterangan: document.getElementById("keterangan").value
+};
+
+dataArsip.push(item);
+localStorage.setItem("dataArsip", JSON.stringify(dataArsip));
+
+tambahKeTabel(item);
+
+
+
+  function td(val) {
+   
     cell.textContent = val;
     return cell;
   }
@@ -36,7 +95,7 @@ form.addEventListener("submit", function (e) {
   tr.appendChild(td(document.getElementById("folder").value));
   tr.appendChild(td(document.getElementById("keterangan").value));
 
-  tabel.appendChild(tr);
+  
 
   nomorBerkas++;
   noBerkasInput.value = nomorBerkas;
@@ -44,3 +103,4 @@ form.addEventListener("submit", function (e) {
   form.reset();
   noBerkasInput.value = nomorBerkas;
 });
+
