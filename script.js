@@ -67,14 +67,12 @@ dataArsip.push(item);
 localStorage.setItem("dataArsip", JSON.stringify(dataArsip));
 
 tambahKeTabel(item);
+function td(val) {
+  const cell = document.createElement("td");
+  cell.textContent = val;
+  return cell;
+}
 
-
-
-  function td(val) {
-   
-    cell.textContent = val;
-    return cell;
-  }
 
   tr.appendChild(td(noBerkasInput.value));
   tr.appendChild(td(document.getElementById("kodeKlasifikasi").value));
@@ -94,6 +92,29 @@ tambahKeTabel(item);
   tr.appendChild(td(document.getElementById("box").value));
   tr.appendChild(td(document.getElementById("folder").value));
   tr.appendChild(td(document.getElementById("keterangan").value));
+// kolom aksi
+const aksiTd = document.createElement("td");
+
+// tombol edit
+const btnEdit = document.createElement("button");
+btnEdit.textContent = "Edit";
+btnEdit.onclick = function () {
+  alert("Fitur edit menyusul 😊");
+};
+
+// tombol hapus
+const btnHapus = document.createElement("button");
+btnHapus.textContent = "Hapus";
+btnHapus.onclick = function () {
+  tr.remove();
+};
+
+// masukkan tombol ke kolom aksi
+aksiTd.appendChild(btnEdit);
+aksiTd.appendChild(btnHapus);
+
+// masukkan kolom aksi ke baris
+tr.appendChild(aksiTd);
 
   
 
@@ -103,4 +124,5 @@ tambahKeTabel(item);
   form.reset();
   noBerkasInput.value = nomorBerkas;
 });
+
 
