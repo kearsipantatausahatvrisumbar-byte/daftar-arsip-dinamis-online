@@ -1,3 +1,8 @@
+// isi nomor berkas otomatis saat halaman dibuka
+document.addEventListener("DOMContentLoaded", function () {
+  const inputNoBerkas = document.getElementById("noBerkas");
+  inputNoBerkas.value = 1;
+});
 // ambil elemen input No Berkas
 const inputNoBerkas = document.getElementById("noBerkas");
 
@@ -30,4 +35,5 @@ form.addEventListener("submit", function (e) {
   tabel.appendChild(tr);
   form.reset();
 });
+
 
