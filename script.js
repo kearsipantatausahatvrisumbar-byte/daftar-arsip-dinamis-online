@@ -16,7 +16,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const noBerkas = inputNoBerkas.value;
-  const noKodeKlasifikasi = KodeKlasifikasi.value;
+  const noKodeKlasifikasi = inputKodeKlasifikasi.value;
   const uraian = inputUraian.value;
   const indeks1 = inputIndeks1.value;
   const indeks2 = inputIndeks2.value;
@@ -63,6 +63,7 @@ tr.appendChild(tdKet);
   nomorBerkas++;
   inputNoBerkas.value = nomorBerkas;
 });
+
 
 
 
