@@ -4,22 +4,19 @@
   <meta charset="UTF-8">
   <title>Daftar Isi Berkas Arsip</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    label { font-weight: bold; }
-    input { width: 100%; margin-bottom: 10px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #000; padding: 5px; text-align: left; }
-    button { padding: 8px 16px; }
+    body { font-family: Arial, sans-serif; }
+    label { display:block; margin-top:10px; }
+    table { border-collapse: collapse; margin-top:20px; width:100%; }
+    th, td { border:1px solid black; padding:6px; text-align:left; }
+    button { margin-top:10px; }
   </style>
 </head>
 <body>
 
-<h2>DAFTAR ISI BERKAS ARSIP AKTIF / INAKTIF  
-TVRI STASIUN SUMATERA BARAT</h2>
+<h1>DAFTAR ISI BERKAS ARSIP</h1>
 
 <form id="formArsip">
-
-  <label>No. Berkas</label>
+  <label>No Berkas</label>
   <input type="number" id="noBerkas" readonly>
 
   <label>Kode Klasifikasi</label>
@@ -31,7 +28,7 @@ TVRI STASIUN SUMATERA BARAT</h2>
   <label>Indeks 2</label>
   <input type="text" id="indeks2">
 
-  <label>No. Item Arsip</label>
+  <label>No Item Arsip</label>
   <input type="text" id="noItem">
 
   <label>Uraian Informasi</label>
@@ -41,7 +38,7 @@ TVRI STASIUN SUMATERA BARAT</h2>
   <input type="date" id="tanggal">
 
   <label>Tingkat Perkembangan</label>
-  <input type="text" id="tingkat">
+  <input type="text" id="tingkat" value="Asli / Copy">
 
   <label>Jumlah</label>
   <input type="text" id="jumlah">
@@ -58,47 +55,48 @@ TVRI STASIUN SUMATERA BARAT</h2>
   <label>Status Akhir Arsip</label>
   <input type="text" id="statusAkhir">
 
-  <label>Sistem Klasifikasi Keamanan & Akses Arsip</label>
+  <label>Sistem Keamanan</label>
   <input type="text" id="keamanan">
 
-  <label>No. Rak</label>
+  <label>No Rak</label>
   <input type="text" id="rak">
 
-  <label>No. Box</label>
+  <label>No Box</label>
   <input type="text" id="box">
 
-  <label>No. Folder</label>
+  <label>No Folder</label>
   <input type="text" id="folder">
 
   <label>Keterangan</label>
   <input type="text" id="keterangan">
 
+  <br>
   <button type="submit">Simpan</button>
+  <button type="button" id="resetBtn">Reset</button>
 </form>
 
 <table>
   <thead>
     <tr>
-      <th>No. Berkas</th>
-      <th>Kode Klasifikasi</th>
+      <th>No</th>
+      <th>Kode</th>
       <th>Indeks 1</th>
       <th>Indeks 2</th>
-      <th>No. Item</th>
+      <th>No Item</th>
       <th>Uraian</th>
       <th>Tanggal</th>
       <th>Tingkat</th>
       <th>Jumlah</th>
       <th>Unit</th>
-      <th>Retensi Aktif</th>
-      <th>Retensi Inaktif</th>
-      <th>Status Akhir</th>
+      <th>Aktif</th>
+      <th>Inaktif</th>
+      <th>Status</th>
       <th>Keamanan</th>
       <th>Rak</th>
       <th>Box</th>
       <th>Folder</th>
       <th>Keterangan</th>
       <th>Aksi</th>
-
     </tr>
   </thead>
   <tbody id="tabelData"></tbody>
@@ -107,4 +105,3 @@ TVRI STASIUN SUMATERA BARAT</h2>
 <script src="script.js"></script>
 </body>
 </html>
-
