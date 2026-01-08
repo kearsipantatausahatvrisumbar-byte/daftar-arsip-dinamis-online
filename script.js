@@ -99,7 +99,28 @@ const aksiTd = document.createElement("td");
 const btnEdit = document.createElement("button");
 btnEdit.textContent = "Edit";
 btnEdit.onclick = function () {
-  alert("Fitur edit menyusul 😊");
+  const cells = tr.querySelectorAll("td");
+
+  document.getElementById("noItem").value = cells[0].textContent;
+  document.getElementById("kodeKlasifikasi").value = cells[1].textContent;
+  document.getElementById("indeks1").value = cells[2].textContent;
+  document.getElementById("indeks2").value = cells[3].textContent;
+  document.getElementById("uraian").value = cells[4].textContent;
+  document.getElementById("tanggal").value = cells[5].textContent;
+  document.getElementById("tingkat").value = cells[6].textContent;
+  document.getElementById("jumlah").value = cells[7].textContent;
+  document.getElementById("unit").value = cells[8].textContent;
+  document.getElementById("retensiAktif").value = cells[9].textContent;
+  document.getElementById("retensiInaktif").value = cells[10].textContent;
+  document.getElementById("statusAkhir").value = cells[11].textContent;
+  document.getElementById("keamanan").value = cells[12].textContent;
+  document.getElementById("rak").value = cells[13].textContent;
+  document.getElementById("box").value = cells[14].textContent;
+  document.getElementById("folder").value = cells[15].textContent;
+  document.getElementById("keterangan").value = cells[16].textContent;
+
+  // hapus baris lama
+  tr.remove();
 };
 
 // tombol hapus
@@ -124,5 +145,6 @@ tr.appendChild(aksiTd);
   form.reset();
   noBerkasInput.value = nomorBerkas;
 });
+
 
 
