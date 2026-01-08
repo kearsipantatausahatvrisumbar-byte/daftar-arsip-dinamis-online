@@ -92,6 +92,21 @@ function td(val) {
   tr.appendChild(td(document.getElementById("box").value));
   tr.appendChild(td(document.getElementById("folder").value));
   tr.appendChild(td(document.getElementById("keterangan").value));
+  // ===== kolom AKSI =====
+const tdAksi = document.createElement("td");
+
+const btnEdit = document.createElement("button");
+btnEdit.textContent = "Edit";
+
+const btnHapus = document.createElement("button");
+btnHapus.textContent = "Hapus";
+
+tdAksi.appendChild(btnEdit);
+tdAksi.appendChild(document.createTextNode(" "));
+tdAksi.appendChild(btnHapus);
+
+tr.appendChild(tdAksi);
+
 // kolom aksi
 const aksiTd = document.createElement("td");
 
@@ -145,6 +160,7 @@ tr.appendChild(aksiTd);
   form.reset();
   noBerkasInput.value = nomorBerkas;
 });
+
 
 
 
