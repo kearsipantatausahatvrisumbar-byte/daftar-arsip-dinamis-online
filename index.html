@@ -1,91 +1,37 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Daftar Arsip</title>
-<style>
-body { font-family: Arial; padding: 20px; }
-h1 { text-align: center; }
-label { font-weight: bold; margin-top: 10px; display: block; }
-input, select, textarea, button { width: 100%; padding: 6px; margin-top: 4px; }
-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-th, td { border: 1px solid #aaa; padding: 6px; }
-th { background: #eee; }
-.edit { color: blue; cursor: pointer; text-decoration: underline; }
-</style>
+  <meta charset="UTF-8">
+  <title>Daftar Arsip</title>
 </head>
-
 <body>
 
-<h1>DAFTAR ISI BERKAS ARSIP AKTIF/INAKTIF TVRI STASIUN SUMATERA BARAT</h1>
+<h2>DAFTAR ISI BERKAS ARSIP</h2>
 
-<label>Unit Pengolah Arsip</label>
-<select id="unit">
-<option value="">-- pilih --</option>
-<option>Sekretariat</option>
-<option>Tata Usaha</option>
-<option>Keuangan</option>
-<option>Program & Berita</option>
-<option>Konten Media Baru</option>
-<option>Pengembangan Usaha</option>
-<option>Teknik Transmisi</option>
-<option>Teknik Studio</option>
-<option>Umum Bagian SDM</option>
-<option>Umum Bagian BMN</option>
-</select>
+<form id="formArsip">
+  <label>No Berkas</label><br>
+  <input type="text" id="noBerkas"><br><br>
+
+  <label>Uraian Informasi</label><br>
+  <input type="text" id="uraian"><br><br>
+
+  <label>Keterangan</label><br>
+  <input type="text" id="keterangan"><br><br>
+
+  <button type="submit">Simpan</button>
+</form>
 
 <hr>
 
-<label>No. Berkas</label>
-<input id="noBerkas" disabled>
-
-<label>Indeks 1</label>
-<select id="indeks1">
-<option>Surat Tugas</option>
-<option>Nota Dinas</option>
-<option>Surat Masuk</option>
-<option>Surat Keluar</option>
-<option>Laporan</option>
-<option>Berita Acara</option>
-<option>Berkas Arsip Aktif Unit Kerja</option>
-<option>Berkas Arsip Non Aktif Unit Kerja</option>
-</select>
-
-<label>Indeks 2</label>
-<input id="indeks2">
-
-<label>Kode Klasifikasi</label>
-<input id="kode">
-
-<label>Tingkat Perkembangan</label>
-<input value="Asli / Copy" disabled>
-
-<label>Uraian Informasi</label>
-<textarea id="uraian"></textarea>
-
-<label>Keterangan</label>
-<select id="keterangan">
-<option>Baik</option>
-<option>Rusak</option>
-</select>
-
-<button onclick="simpan()">Simpan</button>
-<button onclick="exportCSV()">Export CSV</button>
-
-<table>
-<thead>
-<tr>
-<th>No</th>
-<th>Indeks 1</th>
-<th>Indeks 2</th>
-<th>Kode</th>
-<th>Tingkat</th>
-<th>Uraian</th>
-<th>Keterangan</th>
-<th>Edit</th>
-</tr>
-</thead>
-<tbody id="tbody"></tbody>
+<table border="1">
+  <thead>
+    <tr>
+      <th>No Berkas</th>
+      <th>Uraian</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody id="tabelData"></tbody>
 </table>
 
 <script src="script.js"></script>
