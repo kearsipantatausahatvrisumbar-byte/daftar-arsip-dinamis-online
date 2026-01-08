@@ -1,43 +1,44 @@
-let nomorBerkas = 1;
-// isi nomor berkas otomatis saat halaman dibuka
-document.addEventListener("DOMContentLoaded", function () {
-  const inputNoBerkas = document.getElementById("noBerkas");
-  inputNoBerkas.value = 1;
-});
-// ambil elemen input No Berkas
-const inputNoBerkas = document.getElementById("noBerkas");
-
-// cek data lama di localStorage
-let dataTersimpan = JSON.parse(localStorage.getItem("dataArsip")) || [];
-
-// tentukan nomor berikutnya
-let nomorBerikutnya = dataTersimpan.length + 1;
-
-// isi otomatis ke input
-inputNoBerkas.value = nomorBerikutnya;
+// ambil elemen
 const form = document.getElementById("formArsip");
 const tabel = document.getElementById("tabelData");
+const inputNoBerkas = document.getElementById("noBerkas");
+const inputUraian = document.getElementById("uraian");
+const inputKeterangan = document.getElementById("keterangan");
 
+// nomor berkas awal
+let nomorBerkas = 1;
+inputNoBerkas.value = nomorBerkas;
+
+// event simpan
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // cegah reload
 
-  const noBerkas = nomorBerkas;
-  const uraian = document.getElementById("uraian").value;
-  const keterangan = document.getElementById("keterangan").value;
+  const noBerkas = inputNoBerkas.value;
+  const uraian = inputUraian.value;
+  const keterangan = inputKeterangan.value;
 
+  // VALIDASI SEDERHANA
+  if (uraian === "") {
+    alert("Uraian Informasi wajib diisi");
+    return;
+  }
+
+  // buat baris tabel
   const tr = document.createElement("tr");
-
   tr.innerHTML = `
     <td>${noBerkas}</td>
     <td>${uraian}</td>
     <td>${keterangan}</td>
   `;
 
+  // masukkan ke tabel
   tabel.appendChild(tr);
+
+  // reset input kecuali nomor
+  inputUraian.value = "";
+  inputKeterangan.value = "";
+
+  // naikkan nomor berkas
   nomorBerkas++;
-  document.getElementById("noBerkas").value = nomorBerkas;
-  form.reset();
+  inputNoBerkas.value = nomorBerkas;
 });
-
-
-
