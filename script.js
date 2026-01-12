@@ -2,6 +2,24 @@ const form = document.getElementById("formArsip");
 const tabel = document.getElementById("tabelData");
 const noBerkasInput = document.getElementById("noBerkas");
 const resetBtn = document.getElementById("resetBtn");
+const kodeKlasifikasi = document.getElementById("kodeKlasifikasi");
+const indeks1 = document.getElementById("indeks1");
+const indeks2 = document.getElementById("indeks2");
+const noItem = document.getElementById("noItem");
+const uraian = document.getElementById("uraian");
+const tanggal = document.getElementById("tanggal");
+const tingkat = document.getElementById("tingkat");
+const jumlah = document.getElementById("jumlah");
+const unit = document.getElementById("unit"); // 
+const retensiAktif = document.getElementById("retensiAktif");
+const retensiInaktif = document.getElementById("retensiInaktif");
+const statusAkhir = document.getElementById("statusAkhir");
+const keamanan = document.getElementById("keamanan");
+const rak = document.getElementById("rak");
+const box = document.getElementById("box");
+const RuangSimpan = document.getElementById("RuangSimpan"); 
+const keterangan = document.getElementById("keterangan");
+
 
 let data = [];
 let editIndex = -1;
@@ -131,3 +149,4 @@ function editData(i) {
   ruangSimpan.value = d.ruang; 
   keterangan.value = d.ket;
 }
+
