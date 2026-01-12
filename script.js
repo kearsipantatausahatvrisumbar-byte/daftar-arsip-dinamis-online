@@ -1,4 +1,23 @@
 const form = document.getElementById("formArsip");
+const kodeSelect = document.getElementById("kodeKlasifikasi");
+
+// isi dropdown dari data.js
+for (const kode in masterKlasifikasi) {
+  const opt = document.createElement("option");
+  opt.value = kode;
+  opt.textContent = kode + " - " + masterKlasifikasi[kode].uraian;
+  kodeSelect.appendChild(opt);
+}
+kodeSelect.addEventListener("change", function () {
+  const data = masterKlasifikasi[this.value];
+  if (!data) return;
+
+  retensiAktif.value = data.aktif;
+  retensiInaktif.value = data.inaktif;
+  statusAkhir.value = data.nasib;
+  keamanan.value = data.keamanan;
+});
+
 const tabel = document.getElementById("tabelData");
 const noBerkasInput = document.getElementById("noBerkas");
 const resetBtn = document.getElementById("resetBtn");
@@ -166,5 +185,6 @@ kodeInput.addEventListener("change", function () {
     keamanan.value = "";
   }
 });
+
 
 
