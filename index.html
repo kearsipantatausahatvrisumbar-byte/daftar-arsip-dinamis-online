@@ -24,7 +24,7 @@
 
   <label>Indeks 1</label>
 <select id="indeks1">
-  <option value="">-- Pilih --</option>
+  <option value="">-- Pilih Indeks 1--</option>
   <option>Surat Tugas</option>
   <option>Nota Dinas</option>
   <option>Surat Masuk</option>
@@ -111,11 +111,16 @@
   <label>No Box</label>
   <input type="text" id="box">
 
-  <label>No Folder</label>
+  <label>Ruang Simpan</label>
   <input type="text" id="folder">
 
   <label>Keterangan</label>
-  <input type="text" id="keterangan">
+<select id="keterangan">
+  <option value="">-- Pilih Keterangan --</option>
+  <option value="Baik">Baik</option>
+  <option value="Rusak">Rusak</option>
+</select>
+
 
   <br>
   <button type="submit">Simpan</button>
@@ -125,7 +130,7 @@
 <table>
   <thead>
     <tr>
-      <th>No Item</th>
+      <th>No Berkas</th>
       <th>Kode Klasifikasi</th>
       <th>Indeks 1</th>
       <th>Indeks 2</th>
@@ -141,7 +146,7 @@
       <th>Sistem Klasifikasi Keamanan dan Akses Arsip Dinamis</th>
       <th>Rak</th>
       <th>Box</th>
-      <th>Folder</th>
+      <th>Ruang Simpan</th>
       <th>Keterangan</th>
       <th>Aksi</th>
     </tr>
@@ -152,6 +157,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
