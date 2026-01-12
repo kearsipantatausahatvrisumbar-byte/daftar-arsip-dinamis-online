@@ -149,4 +149,22 @@ function editData(i) {
   ruangSimpan.value = d.ruang;
   keterangan.value = d.ket;
 }
+const kodeInput = document.getElementById("kodeKlasifikasi");
+
+kodeInput.addEventListener("change", function () {
+  const kode = kodeInput.value.trim();
+
+  if (masterKlasifikasi[kode]) {
+    retensiAktif.value   = masterKlasifikasi[kode].aktif || "";
+    retensiInaktif.value = masterKlasifikasi[kode].inaktif || "";
+    statusAkhir.value    = masterKlasifikasi[kode].akhir || "";
+    keamanan.value       = masterKlasifikasi[kode].keamanan || "";
+  } else {
+    retensiAktif.value = "";
+    retensiInaktif.value = "";
+    statusAkhir.value = "";
+    keamanan.value = "";
+  }
+});
+
 
