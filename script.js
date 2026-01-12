@@ -32,7 +32,7 @@ form.addEventListener("submit", function(e) {
     keamanan: keamanan.value,
     rak: rak.value,
     box: box.value,
-    folder: folder.value,
+    ruang: ruangSimpan.value,  
     ket: keterangan.value
   };
 
@@ -66,10 +66,24 @@ function renderTabel() {
     }
 
     tr.append(
-      td(d.no), td(d.kode), td(d.i1), td(d.i2), td(d.item),
-      td(d.uraian), td(d.tanggal), td(d.tingkat), td(d.jumlah),
-      td(d.unit), td(d.aktif), td(d.inaktif), td(d.status),
-      td(d.keamanan), td(d.rak), td(d.box), td(d.folder), td(d.ket)
+      td(d.no),
+      td(d.kode),
+      td(d.i1),
+      td(d.i2),
+      td(d.item),
+      td(d.uraian),
+      td(d.tanggal),
+      td(d.tingkat),
+      td(d.jumlah),
+      td(d.unit),
+      td(d.aktif),
+      td(d.inaktif),
+      td(d.status),
+      td(d.keamanan),
+      td(d.rak),
+      td(d.box),
+      td(d.ruang),   
+      td(d.ket)
     );
 
     // AKSI
@@ -114,6 +128,6 @@ function editData(i) {
   keamanan.value = d.keamanan;
   rak.value = d.rak;
   box.value = d.box;
-  folder.value = d.folder;
+  ruangSimpan.value = d.ruang; 
   keterangan.value = d.ket;
 }
