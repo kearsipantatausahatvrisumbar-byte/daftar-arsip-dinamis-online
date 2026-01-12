@@ -17,7 +17,7 @@ const statusAkhir = document.getElementById("statusAkhir");
 const keamanan = document.getElementById("keamanan");
 const rak = document.getElementById("rak");
 const box = document.getElementById("box");
-const RuangSimpan = document.getElementById("RuangSimpan"); 
+const ruangSimpan = document.getElementById("ruangSimpan"); 
 const keterangan = document.getElementById("keterangan");
 
 
@@ -149,4 +149,5 @@ function editData(i) {
   ruangSimpan.value = d.ruang; 
   keterangan.value = d.ket;
 }
+
 
