@@ -1,15 +1,17 @@
 const form = document.getElementById("formArsip");
 const kodeSelect = document.getElementById("kodeKlasifikasi");
 
-// isi dropdown dari data.js
-for (const kode in masterKlasifikasi) {
+masterKlasifikasi.forEach(item => {
   const opt = document.createElement("option");
-  opt.value = kode;
-  opt.textContent = kode + " - " + masterKlasifikasi[kode].uraian;
+  opt.value = item.kode;
+  opt.textContent = item.kode + " - " + item.uraian;
   kodeSelect.appendChild(opt);
-}
+});
 kodeSelect.addEventListener("change", function () {
-  const data = masterKlasifikasi[this.value];
+  const data = masterKlasifikasi.find(
+    x => x.kode === this.value
+  );
+
   if (!data) return;
 
   retensiAktif.value = data.aktif;
@@ -17,6 +19,7 @@ kodeSelect.addEventListener("change", function () {
   statusAkhir.value = data.nasib;
   keamanan.value = data.keamanan;
 });
+
 
 const tabel = document.getElementById("tabelData");
 const noBerkasInput = document.getElementById("noBerkas");
@@ -185,6 +188,7 @@ kodeInput.addEventListener("change", function () {
     keamanan.value = "";
   }
 });
+
 
 
 
