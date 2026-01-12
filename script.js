@@ -11,7 +11,7 @@ const uraian = document.getElementById("uraian");
 const tanggal = document.getElementById("tanggal");
 const tingkat = document.getElementById("tingkat");
 const jumlah = document.getElementById("jumlah");
-const unit = document.getElementById("unit");
+const unitPengolah = document.getElementById("unitPengolah");
 const retensiAktif = document.getElementById("retensiAktif");
 const retensiInaktif = document.getElementById("retensiInaktif");
 const statusAkhir = document.getElementById("statusAkhir");
@@ -21,18 +21,16 @@ const box = document.getElementById("box");
 const ruangSimpan = document.getElementById("ruangSimpan");
 const keterangan = document.getElementById("keterangan");
 
-
-
 let data = [];
 let editIndex = -1;
 
-// nomor otomatis
+// Nomor berkas otomatis
 function updateNoBerkas() {
   noBerkasInput.value = data.length + 1;
 }
 updateNoBerkas();
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const item = {
@@ -45,14 +43,14 @@ form.addEventListener("submit", function(e) {
     tanggal: tanggal.value,
     tingkat: tingkat.value,
     jumlah: jumlah.value,
-    unit: unit.value,
+    unit: unitPengolah.value,
     aktif: retensiAktif.value,
     inaktif: retensiInaktif.value,
     status: statusAkhir.value,
     keamanan: keamanan.value,
     rak: rak.value,
     box: box.value,
-    ruang: ruangSimpan.value,  
+    ruang: ruangSimpan.value,
     ket: keterangan.value
   };
 
@@ -102,11 +100,11 @@ function renderTabel() {
       td(d.keamanan),
       td(d.rak),
       td(d.box),
-      td(d.ruang),   
+      td(d.ruang),
       td(d.ket)
     );
 
-    // AKSI
+    // Aksi
     const aksi = document.createElement("td");
 
     const btnEdit = document.createElement("button");
@@ -132,7 +130,7 @@ function editData(i) {
   const d = data[i];
   editIndex = i;
 
-  noBerkas.value = d.no;
+  noBerkasInput.value = d.no;
   kodeKlasifikasi.value = d.kode;
   indeks1.value = d.i1;
   indeks2.value = d.i2;
@@ -141,16 +139,13 @@ function editData(i) {
   tanggal.value = d.tanggal;
   tingkat.value = d.tingkat;
   jumlah.value = d.jumlah;
-  unit.value = d.unit;
+  unitPengolah.value = d.unit;
   retensiAktif.value = d.aktif;
   retensiInaktif.value = d.inaktif;
   statusAkhir.value = d.status;
   keamanan.value = d.keamanan;
   rak.value = d.rak;
   box.value = d.box;
-  ruangSimpan.value = d.ruang; 
+  ruangSimpan.value = d.ruang;
   keterangan.value = d.ket;
 }
-
-
-
