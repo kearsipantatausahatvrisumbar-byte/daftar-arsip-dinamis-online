@@ -43,6 +43,24 @@ const box = document.getElementById("box");
 const ruangSimpan = document.getElementById("ruangSimpan");
 const keterangan = document.getElementById("keterangan");
 
+// ====== ISI DROPDOWN KODE KLASIFIKASI ======
+const kodeSelect = document.getElementById("kodeKlasifikasi");
+
+// hapus option default kecuali yg pertama
+while (kodeSelect.options.length > 1) {
+  kodeSelect.remove(1);
+}
+
+masterKlasifikasi.forEach(item => {
+  const opt = document.createElement("option");
+  opt.value = item.kode;
+  opt.textContent = item.kode + " - " + item.uraian;
+  kodeSelect.appendChild(opt);
+});
+
+console.log("Dropdown kode klasifikasi terisi:", kodeSelect.options.length);
+
+
 let data = [];
 let editIndex = -1;
 
@@ -188,6 +206,7 @@ kodeInput.addEventListener("change", function () {
     keamanan.value = "";
   }
 });
+
 
 
 
