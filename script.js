@@ -195,3 +195,66 @@ function editData(i) {
   ruangSimpan.value = d.ruang;
   keterangan.value = d.ket;
 }
+
+const exportBtn = document.getElementById("exportCsvBtn");
+
+exportBtn.addEventListener("click", () => {
+  if (data.length === 0) {
+    alert("Data masih kosong");
+    return;
+  }
+
+  const header = [
+    "No Berkas",
+    "Kode Klasifikasi",
+    "Indeks 1",
+    "Indeks 2",
+    "No Item Arsip",
+    "Uraian Informasi",
+    "Tanggal",
+    "Tingkat Perkembangan",
+    "Jumlah",
+    "Unit Pengolah Arsip",
+    "Retensi Aktif",
+    "Retensi Inaktif",
+    "Status Akhir Arsip",
+    "Sistem Keamanan",
+    "No Rak",
+    "No Box",
+    "Ruang Simpan",
+    "Keterangan"
+  ];
+
+  let csv = header.join(",") + "\n";
+
+  data.forEach(d => {
+    csv += [
+      d.no,
+      d.kode,
+      d.i1,
+      d.i2,
+      d.item,
+      `"${d.uraian}"`,
+      d.tanggal,
+      d.tingkat,
+      d.jumlah,
+      d.unit,
+      d.aktif,
+      d.inaktif,
+      d.status,
+      d.keamanan,
+      d.rak,
+      d.box,
+      d.ruang,
+      d.ket
+    ].join(",") + "\n";
+  });
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "daftar_arsip.csv";
+  link.click();
+});
