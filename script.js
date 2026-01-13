@@ -1,32 +1,11 @@
+/* =========================
+   ELEMENT
+========================= */
 const form = document.getElementById("formArsip");
-const kodeSelect = document.getElementById("kodeKlasifikasi");
-
-masterKlasifikasi.forEach(item => {
-  const opt = document.createElement("option");
-  opt.value = item.kode;
-  opt.textContent = item.kode;
-  kodeSelect.appendChild(opt);
-});
-kodeSelect.addEventListener("change", function () {
-  const data = masterKlasifikasi.find(
-    item => item.kode === this.value
-  );
-
-  console.log("dipilih:", this.value);
-  console.log("ketemu data:", data);
-
-  if (!data) return;
-
-  retensiAktif.value = data.retensiAktif || "";
-  retensiInaktif.value = data.retensiInaktif || "";
-  statusAkhir.value = data.nasibAkhir || "";
-  keamanan.value = data.keamanan || "";
-});
-
 const tabel = document.getElementById("tabelData");
-const noBerkasInput = document.getElementById("noBerkas");
 const resetBtn = document.getElementById("resetBtn");
 
+const noBerkasInput = document.getElementById("noBerkas");
 const kodeKlasifikasi = document.getElementById("kodeKlasifikasi");
 const indeks1 = document.getElementById("indeks1");
 const indeks2 = document.getElementById("indeks2");
@@ -45,32 +24,64 @@ const box = document.getElementById("box");
 const ruangSimpan = document.getElementById("ruangSimpan");
 const keterangan = document.getElementById("keterangan");
 
-// ====== ISI DROPDOWN KODE KLASIFIKASI ======
+/* =========================
+   DROPDOWN KODE KLASIFIKASI
+========================= */
 
-// hapus option default kecuali yg pertama
-while (kodeSelect.options.length > 1) {
-  kodeSelect.remove(1);
+// bersihkan option lama (sisakan option pertama)
+while (kodeKlasifikasi.options.length > 1) {
+  kodeKlasifikasi.remove(1);
 }
 
+// isi dari data.js
 masterKlasifikasi.forEach(item => {
   const opt = document.createElement("option");
   opt.value = item.kode;
-  opt.textContent = item.kode + " - " + item.uraian;
-  kodeSelect.appendChild(opt);
+  opt.textContent = item.kode + " - " + (item.uraian || "");
+  kodeKlasifikasi.appendChild(opt);
 });
 
-console.log("Dropdown kode klasifikasi terisi:", kodeSelect.options.length);
+console.log("Dropdown kode klasifikasi terisi:", kodeKlasifikasi.options.length);
 
+/* =========================
+   AUTO ISI RETENSI & KEAMANAN
+========================= */
+kodeKlasifikasi.addEventListener("change", function () {
+  const data = masterKlasifikasi.find(
+    x => x.kode === this.value
+  );
 
+  console.log("dipilih:", this.value);
+  console.log("ketemu:", data);
+
+  if (!data) {
+    retensiAktif.value = "";
+    retensiInaktif.value = "";
+    statusAkhir.value = "";
+    keamanan.value = "";
+    return;
+  }
+
+  retensiAktif.value = data.retensiAktif || "";
+  retensiInaktif.value = data.retensiInaktif || "";
+  statusAkhir.value = data.nasibAkhir || "";
+  keamanan.value = data.keamanan || "";
+});
+
+/* =========================
+   DATA & NOMOR OTOMATIS
+========================= */
 let data = [];
 let editIndex = -1;
 
-// Nomor berkas otomatis
 function updateNoBerkas() {
   noBerkasInput.value = data.length + 1;
 }
 updateNoBerkas();
 
+/* =========================
+   SUBMIT FORM
+========================= */
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -107,45 +118,36 @@ form.addEventListener("submit", function (e) {
   updateNoBerkas();
 });
 
+/* =========================
+   RESET
+========================= */
 resetBtn.addEventListener("click", () => {
   form.reset();
   editIndex = -1;
 });
 
+/* =========================
+   RENDER TABEL
+========================= */
 function renderTabel() {
   tabel.innerHTML = "";
 
   data.forEach((d, i) => {
     const tr = document.createElement("tr");
 
-    function td(v) {
+    const td = v => {
       const c = document.createElement("td");
       c.textContent = v;
       return c;
-    }
+    };
 
     tr.append(
-      td(d.no),
-      td(d.kode),
-      td(d.i1),
-      td(d.i2),
-      td(d.item),
-      td(d.uraian),
-      td(d.tanggal),
-      td(d.tingkat),
-      td(d.jumlah),
-      td(d.unit),
-      td(d.aktif),
-      td(d.inaktif),
-      td(d.status),
-      td(d.keamanan),
-      td(d.rak),
-      td(d.box),
-      td(d.ruang),
-      td(d.ket)
+      td(d.no), td(d.kode), td(d.i1), td(d.i2), td(d.item),
+      td(d.uraian), td(d.tanggal), td(d.tingkat), td(d.jumlah),
+      td(d.unit), td(d.aktif), td(d.inaktif), td(d.status),
+      td(d.keamanan), td(d.rak), td(d.box), td(d.ruang), td(d.ket)
     );
 
-    // Aksi
     const aksi = document.createElement("td");
 
     const btnEdit = document.createElement("button");
@@ -167,6 +169,9 @@ function renderTabel() {
   });
 }
 
+/* =========================
+   EDIT DATA
+========================= */
 function editData(i) {
   const d = data[i];
   editIndex = i;
@@ -190,28 +195,3 @@ function editData(i) {
   ruangSimpan.value = d.ruang;
   keterangan.value = d.ket;
 }
-const kodeInput = document.getElementById("kodeKlasifikasi");
-
-kodeInput.addEventListener("change", function () {
-  const kode = kodeInput.value.trim();
-
-  if (masterKlasifikasi[kode]) {
-    retensiAktif.value   = masterKlasifikasi[kode].aktif || "";
-    retensiInaktif.value = masterKlasifikasi[kode].inaktif || "";
-    statusAkhir.value    = masterKlasifikasi[kode].akhir || "";
-    keamanan.value       = masterKlasifikasi[kode].keamanan || "";
-  } else {
-    retensiAktif.value = "";
-    retensiInaktif.value = "";
-    statusAkhir.value = "";
-    keamanan.value = "";
-  }
-});
-
-
-
-
-
-
-
-
