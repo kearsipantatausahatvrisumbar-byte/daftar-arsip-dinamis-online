@@ -197,7 +197,6 @@ function editData(i) {
 }
 
 const exportBtn = document.getElementById("exportCsvBtn");
-
 exportBtn.addEventListener("click", () => {
   if (data.length === 0) {
     alert("Data masih kosong");
@@ -225,7 +224,7 @@ exportBtn.addEventListener("click", () => {
     "Keterangan"
   ];
 
-  let csv = header.join(",") + "\n";
+  let csv = header.map(h => `"${h}"`).join(";") + "\n";
 
   data.forEach(d => {
     csv += [
@@ -234,7 +233,7 @@ exportBtn.addEventListener("click", () => {
       d.i1,
       d.i2,
       d.item,
-      `"${d.uraian}"`,
+      d.uraian,
       d.tanggal,
       d.tingkat,
       d.jumlah,
@@ -247,7 +246,7 @@ exportBtn.addEventListener("click", () => {
       d.box,
       d.ruang,
       d.ket
-    ].join(",") + "\n";
+    ].map(v => `"${v ?? ""}"`).join(";") + "\n";
   });
 
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
@@ -255,6 +254,8 @@ exportBtn.addEventListener("click", () => {
 
   const link = document.createElement("a");
   link.href = url;
-  link.download = "daftar_arsip.csv";
+  link.download = "DAFTAR_ISI_ARSIP_TVRI_SUMBAR.csv";
   link.click();
 });
+
+
