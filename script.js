@@ -4,20 +4,27 @@ const kodeSelect = document.getElementById("kodeKlasifikasi");
 masterKlasifikasi.forEach(item => {
   const opt = document.createElement("option");
   opt.value = item.kode;
-  opt.textContent = item.kode + " - " + item.uraian;
+  opt.textContent = item.kode;
   kodeSelect.appendChild(opt);
 });
 kodeSelect.addEventListener("change", function () {
-  const data = masterKlasifikasi.find(
-    x => x.kode === this.value
+  const selected = masterKlasifikasi.find(
+    item => item.kode === this.value
   );
 
-  if (!data) return;
+  if (!selected) return;
 
-  retensiAktif.value = data.aktif;
-  retensiInaktif.value = data.inaktif;
-  statusAkhir.value = data.nasib;
-  keamanan.value = data.keamanan;
+  document.getElementById("retensiAktif").value =
+    selected.retensiAktif || "";
+
+  document.getElementById("retensiInaktif").value =
+    selected.retensiInaktif || "";
+
+  document.getElementById("statusAkhir").value =
+    selected.nasibAkhir || "";
+
+  document.getElementById("keamanan").value =
+    selected.keamanan || "";
 });
 
 
@@ -205,6 +212,7 @@ kodeInput.addEventListener("change", function () {
     keamanan.value = "";
   }
 });
+
 
 
 
