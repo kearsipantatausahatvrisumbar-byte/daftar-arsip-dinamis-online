@@ -44,7 +44,6 @@ const ruangSimpan = document.getElementById("ruangSimpan");
 const keterangan = document.getElementById("keterangan");
 
 // ====== ISI DROPDOWN KODE KLASIFIKASI ======
-const kodeSelect = document.getElementById("kodeKlasifikasi");
 
 // hapus option default kecuali yg pertama
 while (kodeSelect.options.length > 1) {
@@ -206,6 +205,7 @@ kodeInput.addEventListener("change", function () {
     keamanan.value = "";
   }
 });
+
 
 
 
